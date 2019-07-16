@@ -1,0 +1,235 @@
+/* tabmenu style */
+.tabgroup{
+	position: relative;
+	width: 800px;
+	margin: 50px auto;
+}
+.tabmenu{
+	position: relative;
+	border-bottom: 2px solid #000;
+}
+.tabmenu::after{
+	content: "";
+	clear: both;
+	display: block;
+}
+.tabmenu li{
+	display: inline-block;
+	margin-bottom: -2px;
+}
+.tabmenu a{
+	position: relative;
+	display: inline-block;
+	min-width: 100px;
+	padding: 10px 5px;
+	border: 1px solid #ddd;
+	border-bottom-width: 2px;
+	border-bottom-color: #222;
+	background-color: #f5f5f5;
+	text-align: center;
+}
+.tabcnt{
+	display: none;
+	min-height: 500px;
+	border: 1px solid #222;
+	border-top: 0;
+	padding: 20px 15px;
+}
+/* tabmenu 활성화 */
+.tabmenu .on{
+
+}
+.tabmenu .on a{
+	z-index: 1;
+	border-color: #222;
+	border-bottom-color: #fff;
+	background-color: #fff;
+}
+.tabcnt.on{
+	display: block;
+}
+
+
+
+/* tabmenu stlye hx type */
+.hxtabgroup{
+	position: relative;
+	width: 800px;
+	margin: 20px auto;
+	height: 400px;
+	border-bottom: 1px solid #222;
+}
+.hxtabgroup h2{
+	display: inline-block;
+}
+.hxtabgroup h2 a{
+	display: inline-block;
+	min-width: 100px;
+	height: 40px;
+	padding: 10px 5px;
+	border: 1px solid #ddd;
+	background-color: #f5f5f5;
+	text-align: center;
+	vertical-align: middle;
+}
+.hxcnt{
+	display: none;
+	position: absolute;
+	width: 100%;
+	padding: 20px 15px;
+	border-top: 1px solid #222;
+}
+.hxcnt ul{
+
+}
+.hxcnt li{
+	position: relative;
+	line-height: 30px;
+}
+.hxcnt a{
+	overflow: hidden;
+	display: inline-block;
+	width: calc(100% - 100px);
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.hxcnt li span{
+position: absolute;
+top: 0;
+right: 0;
+}
+.hxcnt .more{
+	display:inline-block;
+	position: absolute;
+	top:-30px;
+	right: -650px;
+}
+/* hx type 활성화 */
+.hxtabgroup h2.on{
+	
+}
+.hxtabgroup h2.on a{
+	border-color: #222;
+	background-color: #222;
+	color: #fff;
+}
+.hxcnt.on{
+	display: block;
+}
+
+
+/* ul */
+.ultabgroup{
+	position: relative;
+	width: 800px;
+	height: 400px;
+	margin: 0 auto;
+}
+.tab{
+
+}
+/* depth 1 */
+.tab > li{
+	display: inline-block;
+}
+.tab > li > a{
+	position: relative;
+	display: inline-block;
+	min-width: 100px;
+	height: 40px;
+	padding: 10px 5px;
+	border: 1px solid #ddd;
+	background-color: #f5f5f5;
+	text-align: center;
+}
+/* depth 2 */
+.tab li ul{
+	display:none;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	padding: 20px 15px;
+}
+.tab li ul li{
+position: relative;
+line-height: 30px;
+}
+.tab li ul li a{
+	overflow: hidden;
+	display: inline-block;
+	max-width: calc(100% - 100px);
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.tab li ul li span{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.tab li .more{
+	display:none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	min-width: auto;
+	height: auto;
+	padding:0;
+	border:0;
+	background-color: transparent;
+}
+/* ul 활성화 */
+.tab > li.on{
+
+}
+.tab > li.on > a{
+	border-color: #222;
+	background-color: #222;
+	color: #fff;
+}
+.tab > li.on > .more{
+	border-color: transparent;
+	background-color: transparent;
+	color: #222;
+}
+.tab li.on ul{
+	display: block;
+}
+.tab li.on .more{
+	display: inline-block;
+}
+
+/* navigation */
+.nav{
+
+}
+.gnb{
+
+}
+.gnb::after{
+content: "";
+display: block;
+clear: both;
+}
+/* nav > depth1 */
+.gnb .dep1{
+	float: left;
+/* 	width: 20%; */
+	width: calc(100% / 5);
+	height: 40px;
+	background-color: skyblue;
+	line-height: 40px;
+	text-align: center;
+}
+.gnb .dep1 > a{
+
+}
+/* nav > depth2 */
+.gnb .dep2{
+	display: none;
+}
+.gnb .dep2 li{
+
+}
+.gnb .dep2 > li > a{
+
+}
