@@ -1,0 +1,163 @@
+/* table style */
+.tbl{
+	overflow-y:hidden;
+	overflow-x:auto;
+	width:800px;
+	margin:0 auto 20px;
+}
+.tbl table{
+
+}
+.tbl th{
+	padding: 5px;
+	border: 1px solid #ddd;
+}
+.tbl td{
+	padding:5px;
+	border: 1px solid #ddd;
+}
+.tbl thead th{
+
+}
+.tbl tbody th{
+	
+}
+.tbl .nodata{
+	min-height: 250px;
+	line-height: 250px;
+	text-align: center;
+}
+/* table list style */
+.tbl-list{
+
+}
+.tbl-list table{
+
+}
+.tbl-list td{
+	text-align: center;
+}
+.tbl-list td a{
+	/* 말줄임 처리 방식 */
+	overflow: hidden;
+	display: block;
+	max-width:100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.tbl-list td a:hover{
+	text-decoration: underline;
+}
+
+/* pagiong navigation */
+.paging{
+	width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+.paging a,
+.paging strong{
+	display:inline-block;
+	min-width:40px;
+	padding:5px;
+	border:1px solid #ddd;
+}
+.paging strong{
+
+}
+.paging a{
+
+}
+.paging a:hover{
+	background-color: #222;
+	color:#fff;
+}
+.paging .btn-first{
+
+}
+.paging .btn-prev{
+	
+}
+.paging .btn-next{
+	
+}
+.paging .btn-last{
+	
+}
+
+
+/* searchbox */
+.searchbox{
+	width: 800px;
+	margin: 0 auto 20px;
+	text-align: center;
+}
+
+/* prevnext 이전글/ 다음글 */
+.prevnext{
+	width: 800px;
+	margin: 0 auto 20px;
+	border: 2px solid #222;
+	border-right: 0;
+	border-left: 0;
+}
+.prevnext dl{
+
+}
+.prevnext dl:first-child{
+	border-bottom: 1px solid #ddd;
+}
+.prevnext dl::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.prevnext dt{
+	position: relative;
+	float: left;
+	width: 100px;
+	height: 40px;
+	padding: 5px;
+	line-height: 30px;
+	text-align: center;
+}
+.prevnext dt::after{
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 1px;
+	height: 5px;
+	background-color: #ddd;
+	transform:translateY(-50%);
+	-webkit-transform:translateY(-50%);
+	-moz-transform:translateY(-50%);
+	-ms-transform:translateY(-50%);
+	-o-transform:translateY(-50%);
+}
+.prevnext dd{
+	position: relative;
+	height: 40px;
+	margin-left: 100px;
+	padding: 5px;
+	line-height: 30px;
+}
+.prevnext a{
+	overflow: hidden;
+	display: block;
+	/* max-width: 90%; */
+	width:calc(100% - 100px);
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.prevnext span{
+	position: absolute;
+	top: 50%;
+	right: 5px;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>float</title>
+	<style>
+		/* Reset */
+		*{
+			margin:0;
+			padding:0;
+			list-style:none;
+			box-sizing:border-box;
+		}
+		body{
+			background-color:#222;
+		}
+		.clear{
+			clear:both;
+		}
+		.clear::after{
+			content:"";
+			clear:both;
+			display:block;
+		}
+		/* Layout */
+		.wrap{
+			min-width:800px;
+		}
+		.header{
+			min-height:80px;
+			background-color:burlywood;
+		}
+		.main{
+			padding:10px;
+			background-color:darkblue;
+		}
+		/* .main::after{
+			content:"";
+			clear:both;
+			display:block;
+		} */
+		.sidemenu{
+			float:left;
+			min-width:200px;
+			max-width:200px;
+			min-height:500px;
+			margin-right:-100%;
+			background-color:chartreuse;
+		}
+		.csection{
+			position:relative;
+			margin-left:220px;
+			min-height:800px;
+			background-color:white;
+		}
+		.footer{
+			min-height:80px;
+			background-color:#222;
+		}
+		/* csection > sns */
+		.sns{
+			position:absolute;
+			top:50px;
+			right:20px;
+		}
+		.sns li{
+			display:inline-block;
+			float:left;
+			border:1px solid;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<header class="header">
+
+		</header>
+		<!-- //.header -->
+		<main class="main clear">
+			<section class="sidemenu">
+
+			</section>
+			<!-- //.sidemenu -->
+			<section class="csection">
+				<ul class="sns">
+					<li><a href="#">트위터</a></li>
+					<li><a href="#">인스타</a></li>
+					<li><a href="#">페이스북</a></li>
+				</ul>
+			</section>
+			<!-- //.csection -->
+		</main>
+		<!-- //.main -->
+		<footer class="footer">
+
+		</footer>
+		<!-- //.footer -->
+	</div>
+	<!-- //.wrap -->
+</body>
+</html>

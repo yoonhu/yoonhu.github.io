@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>table</title>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<style>
+		/* reset */
+		*{
+			margin:0;
+			padding:0;
+			color:#222;
+			font-size:13px;
+			font-family:'Noto Sans KR','맑은 고딕';
+			border:0;
+			line-height:1;
+			box-sizing:border-box;
+		}
+		address,em,i{
+			font-style:normal;
+		}
+		table{
+			width:100%;
+			table-layout:fixed;
+			border-spacing:0;
+			border-collapse:collapse;
+		}
+		th,td{
+			border:0;
+		}
+		.clear{
+			clear:both;
+		}
+		.clear::after{
+			content:"";
+			display:block;
+			clear:both;
+			width:100%;
+		}
+		/* 숨김처리 */
+		.tts{
+			overflow:hidden;
+			position:absolute;
+			/* top:-999em; */
+			z-index:-1;
+			width:1px;
+			height:1px;
+			color:transparent;
+		}
+
+		/* form style */
+		label,input,select,textarea{
+			vertical-align:middle;
+		}
+		label{
+			display:inline-block;
+		}
+		input[type="text"],
+		input[type="password"]{
+			min-height:20px;
+			padding:0 5px;
+			border:1px solid #ccc;
+		}
+		select{
+			border:1px solid #ccc;
+		}
+		textarea{
+			width:100%;
+			border:1px solid #ccc;
+		}
+		.chkbox input{
+			overflow:hidden;
+			position:absolute;
+			/* top:-999em; */
+			z-index:-1;
+			width:1px;
+			height:1px;
+			color:transparent;
+		}
+		.chkbox span{
+			display:inline-block;
+			height:20px;
+			padding-left:30px;
+			background-repeat:no-repeat;
+			background-position:0 50%;
+			background-size:20px 20px;
+			background-image:url('image/icon/ico_s1_off.png');
+			line-height:20px;
+		}
+		.chkbox input:checked + span{
+			background-image:url('image/icon/ico_s1_on.png');
+		}
+
+
+
+		/* table style */
+		.tbl{
+			width:700px;
+			margin:0 auto;
+		}
+		.tbl table{
+			border:1px solid #000;
+		}
+		.tbl th{
+			padding:8px 5px;
+			border:1px solid #000;
+		}
+		.tbl td{
+			padding:8px 5px;
+			border:1px solid #000;
+		}
+		.tbl td input[type="checkbox"],
+		.tbl td input[type="radio"]{
+			margin-top:-3px;
+		}
+	</style>
+</head>
+<body>
+	<h2>회원가입</h2>
+	<div class="tbl">
+		<table>
+			<caption class="tts">회원가입의 제목,이름,비밀번호,주소,전화번호,관심사를 입력하는 폼입니다</caption>
+			<colgroup>
+				<col style="width:100px">
+				<col>
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">제목</th>
+					<th scope="col">내용</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th scope="row">합계</th>
+					<td>1,000</td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<th scope="row">이름</th>
+					<td>
+						<label>
+							<i class="tts">이름입력</i>
+							<input type="text" name="" title="이름을 입력해주세요">
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">비밀번호</th>
+					<td>
+						<label>
+							<input type="password" name="" title="비밀번호 입력">
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">비밀번호 확인</th>
+					<td>
+						<label>
+							<input type="password" name="" title="비밀번호 재입력">
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">주소</th>
+					<td>
+						<div>
+							<label>
+								<input type="text" name="">
+							</label>
+							<a href="#" class="btn btn-post sm">우편번호</a>
+						</div>
+						<div>
+							<label>
+								<input type="text" name="" title="주소를 입력해주세요">
+							</label>
+						</div>
+						<div>
+							<label>
+								<input type="text" name="" title="상세주소를 입력해주세요">
+							</label>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">관심사</th>
+					<td>
+						<label class="chkbox">
+							<input type="checkbox" name="" checked><span>스포츠</span>
+						</label>
+						<label class="chkbox">
+							<input type="checkbox" name=""><span>영화</span>
+						</label>
+						<label class="chkbox">
+							<input type="checkbox" name=""><span>음악</span>
+						</label>
+						<label class="chkbox">
+							<input type="checkbox" name=""><span>뮤지컬</span>
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">성별</th>
+					<td>
+						<label class="radbox">
+							<input type="radio" name="rad"><span>남</span>
+						</label>
+						<label class="radbox">
+							<input type="radio" name="rad"><span>여</span>
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<th>전화번호</th>
+					<td>
+						<label>
+							<select>
+								<option>선택</option>
+								<option>010</option>
+							</select>
+						</label>
+						<label>
+							<input type="text" name="">
+						</label>
+						<label>
+							<input type="text" name="">
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">상세정보</th>
+					<td>
+						<label>
+							<textarea cols="75" rows="7"></textarea>
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">파일첨부</th>
+					<td>
+						<label>
+							<input type="file" name="">
+							<span>첨부파일</span>
+						</label>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- //.tbl -->
+	<div class="btnarea t-center">
+		<a href="#" class="btn btn-cofirm">회원가입</a>
+		<a href="#" class="btn btn-cancel">취소</a>
+	</div>
+	<!-- //.btnarea -->
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>form 요소</title>
+</head>
+<body>
+	
+<form method="post" action="https://www.naver.com">
+<fieldset>
+	<legend>폼 요소 제목</legend>
+	<input type="text" name="" placeholder="아이디를 입력해주세요" value="">                         <!-- name값은 빈값으로 하기 -->
+	<input type="password" name="" placeholder="패스워드를 입력해주세요" value="">
+	<input type="checkbox" name="" id="chk1"> <label for="chk1">html</label>
+	<input type="checkbox" name="" id="chk2"> <label for="chk2">css</label>
+	<input type="radio" name="rad" id="rad1"> <label for="rad1">html</label>
+	<input type="radio" name="rad" id="rad2"> <label for="rad2">css</label>
+
+	<label>
+		<input type="checkbox" name="">
+		 <span>html</span>
+	</label>
+	<label>
+		<input type="checkbox" name="">
+		<span>css</span>
+	</label>
+	<label>
+		<input type="radio" name="rad">
+		<span>htmp</span>
+	</label>
+	<label>
+		<input type="radio" name="rad">
+		<span>css</span>
+	</label>
+
+	<input type="button" value="확인" class="btn btn-confirm">
+	<input type="submit" value="전송" class="btn-submit">
+	<input type="image" src="" alt="확인" class="btn-confirm">
+	<input type="reset" value="초기화" class="btn-reset">
+	<input type="hidden" value="">
+
+	<button class="btn btn-submit">전송</button>
+	<a href="#" class="btn btn-submit">전송</a>
+
+
+
+
+	<label>
+		<select name="">
+			<option>선택</option>
+			<option selected>010</option>
+		</select>
+	</label>
+	<label>
+		<select name="">
+			<option>선택</option>
+			<optgroup label="서울특별시">
+				<option>서초구</option>
+				<option>관악구</option>
+				<option>구로구</option>
+			</optgroup>
+			<optgroup label="부산광역시">
+					<option>해운대구</option>
+					<option>사상구</option>
+					<option>사직구</option>
+				</optgroup>
+		</select>
+	</label>
+	
+	<label>
+		<textarea cols="75" rows="7" placeholder="내용을 입력해주세요."></textarea>
+	</label>
+
+	<label>
+		<input type="email" name="">
+	</label>
+	<label>
+			<input type="url" name="">
+		</label>
+	<label>
+		<input type="search" name="">
+	</label>
+	<label>
+		<input type="date" name="">
+	</label>
+	<label>
+		<input type="year" name="">
+	</label>
+	<label>
+		<input type="week" name="">
+	</label>
+	<label>
+		<input type="telephone" name="">
+	</label>
+	<label>
+		<input type="month" name="">
+	</label>
+	<label>
+		<input type="number" name="">
+	</label>
+	
+
+
+</fieldset>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+div 옵션 id, class(btn, col3, btn-modify, blue, md)
+id 값은 하나만 가능 
+
+-CSS 불러오기 방법
+1. linkd 방식 : head 안에서 <link rel="stylesheet" type="text/css" href="css경로"> 
+2. styled 방식 : head 안에서 <style>css문법작성</style> 
+3. import 방식 : head 안에서 @import url(css경로);
+4. 인라인 스타일 방식 : <div style=""></div>
+
+css 구조(http://uxcss.com/edu/_guide/ppt.html 참고)
+중괄호 안에 작성, 
+세미콜론으로 구분
+
+	<!-- 
+	box-sizing:border-box;
+	text-align (좌우 정렬)
+	vertical-align (수직 정렬)
+	 -->
+
+	/* 
+	background:#000 url() no-repeat 0 0 fixed/100%
+	background-color:black;
+	background-repeat:repeat, no-repeat, repeat-x, repeat-y(좌측 상단부터 시작)
+	background-position: 0 0; (백그라운드 좌표값 픽셀 % 모두가능)
+	background-position-x: (백그라운드 좌표값)
+	background-position-y: (백그라운드 좌표값)
+	background-image: url(이미지경로); (이미지 가져오기)
+	background-attachment:scroll, fixed; (고정 여부)
+	background-size : contain(가로,세로 균등하게), cover(박스에 채워서 보여줌), x축, y축, px px (배경 사이즈)
+	 */
+
+	background-repeat: no-repeat;
+	background-position: 100% 90%;
+	background-image: url(image/icon/ico_s1_on.png);
+
+
+<!-- 
+
+	form
+	fieldset(사용 거의 안함)
+	legend(홈 요소의 제목, 사용 거의 안함)
+
+
+	input (입력창)
+		type 속성 + readonly, disabled, placeholder
+			text (일반적인 텍스트)
+			password (*처럼 나오는 것)
+			checkbox
+			radio
+			hidden (개발자들이 많이 사용)
+			button
+			submit
+			reset
+			image
+			label
+			
+			search
+			url
+			date
+			week
+			year
+			month
+			email
+			telephone
+
+
+	select (지역, 제목 등 선택 옵션)
+		option
+	textarea (부가정보 입력시 50자 한정 이런 것)
+
+
+
+ -->
+
+method 안에는 get, post 방식이 있음
+
+
+
+
+
+
+	label로 안 묶는 요소들
+	<input type="button" value="전송">
+	<input type="submit" value="전송">
+	<input type="image" src="" alt="전송">
+	<input type="reset" value="초기화">
+	<input type="hidden" value="">

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>리스트</title>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+</head>
+<body>
+	<div class="tbl tbl-list">
+		<table>
+			<caption>리스트</caption>
+			<colgroup>
+				<col class="num">
+				<col class="tit">
+				<col class="date">
+				<col class="author">
+				<col class="hits">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">번호</th>
+					<th scope="col">제목</th>
+					<th scope="col">작성일</th>
+					<th scope="col">작성자</th>
+					<th scope="col">조회수</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- 내용이 없을 경우 -->
+				<!-- <tr>
+					<td colspan="5" class="nodata"><div>내용이 없습니다.</div></td>
+				</tr> -->
+
+				<!-- 내용이 있을 경우 -->
+				<tr>
+					<td>1000</td>
+					<td class="t-left">
+						<a href="view.html">table 연습 제목입니다. table 연습 제목입니다.table 연습 제목입니다.table 연습 제목입니다.</a>
+					</td>
+					<td>2019.07.04</td>
+					<td>관리자</td>
+					<td>9999</td>
+				</tr>
+				<tr>
+					<td>1000</td>
+					<td class="t-left">
+						<a href="view.html">table 연습 제목입니다. table 연습 제목입니다.table 연습 제목입니다.table 연습 제목입니다.</a>
+					</td>
+					<td>2019.07.04</td>
+					<td>관리자</td>
+					<td>9999</td>
+				</tr>
+				<tr>
+					<td>1000</td>
+					<td class="t-left">
+						<a href="view.html">table 연습 제목입니다. table 연습 제목입니다.table 연습 제목입니다.table 연습 제목입니다.</a>
+					</td>
+					<td>2019.07.04</td>
+					<td>관리자</td>
+					<td>9999</td>
+				</tr>
+				<tr>
+					<td>1000</td>
+					<td class="t-left">
+						<a href="view.html">table 연습 제목입니다. table 연습 제목입니다.table 연습 제목입니다.table 연습 제목입니다.</a>
+					</td>
+					<td>2019.07.04</td>
+					<td>관리자</td>
+					<td>9999</td>
+				</tr>
+				<tr>
+					<td>1000</td>
+					<td class="t-left">
+						<a href="view.html">table 연습 제목입니다. table 연습 제목입니다.table 연습 제목입니다.table 연습 제목입니다.</a>
+					</td>
+					<td>2019.07.04</td>
+					<td>관리자</td>
+					<td>9999</td>
+				</tr>
+				<tr>
+					<td>1000</td>
+					<td class="t-left">
+						<a href="view.html">table 연습 제목입니다. table 연습 제목입니다.table 연습 제목입니다.table 연습 제목입니다.</a>
+					</td>
+					<td>2019.07.04</td>
+					<td>관리자</td>
+					<td>9999</td>
+				</tr>
+				<tr>
+					<td>1000</td>
+					<td class="t-left">
+						<a href="view.html">table 연습 제목입니다. table 연습 제목입니다.table 연습 제목입니다.table 연습 제목입니다.</a>
+					</td>
+					<td>2019.07.04</td>
+					<td>관리자</td>
+					<td>9999</td>
+				</tr>
+				<tr>
+					<td>1000</td>
+					<td class="t-left">
+						<a href="view.html">table 연습 제목입니다. table 연습 제목입니다.table 연습 제목입니다.table 연습 제목입니다.</a>
+					</td>
+					<td>2019.07.04</td>
+					<td>관리자</td>
+					<td>9999</td>
+				</tr>
+				<tr>
+					<td>1000</td>
+					<td class="t-left">
+						<a href="view.html">table 연습 제목입니다. table 연습 제목입니다.table 연습 제목입니다.table 연습 제목입니다.</a>
+					</td>
+					<td>2019.07.04</td>
+					<td>관리자</td>
+					<td>9999</td>
+				</tr>
+				<tr>
+					<td>1000</td>
+					<td class="t-left">
+						<a href="view.html">table 연습 제목입니다. table 연습 제목입니다.table 연습 제목입니다.table 연습 제목입니다.</a>
+					</td>
+					<td>2019.07.04</td>
+					<td>관리자</td>
+					<td>9999</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- //.tbl -->
+	<div class="paging">
+		<a href="#" class="btn-first">첫페이지</a>
+		<a href="#" class="btn-prev">이전페이지</a>
+		<strong class="current">1</strong>
+		<a href="#">2</a>
+		<a href="#">3</a>
+		<a href="#">4</a>
+		<a href="#">5</a>
+		<a href="#">6</a>
+		<a href="#">7</a>
+		<a href="#">8</a>
+		<a href="#">9</a>
+		<a href="#">10</a>
+		<a href="#" class="btn-next">다음페이지</a>
+		<a href="#" class="btn-last">마지막페이지</a>
+	</div>
+	<!-- //.paging -->
+	<div class="btnarea t-right">
+		<a href="write.html" class="btn btn-write">글작성</a>
+	</div>
+	<!-- //.btnarea -->
+</body>
+</html>

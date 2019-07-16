@@ -1,0 +1,63 @@
+/* table style */
+.tbl{
+	width:700px;
+	margin:0 auto;
+}
+.tbl table{
+	border:1px solid #000;
+}
+.tbl th{
+	padding:8px 5px;
+	border:1px solid #000;
+}
+.tbl td{
+	padding:8px 5px;
+	border:1px solid #000;
+}
+.tbl td input[type="checkbox"],
+.tbl td input[type="radio"]{
+	margin-top:-3px;
+}
+
+/* table list */
+.tbl-list{
+	width:100%;
+}
+.tbl-list table{
+
+}
+.tbl-list colgroup .num{
+	width:100px;
+}
+.tbl-list colgroup .tit{
+	width:auto;
+}
+.tbl-list colgroup .date{
+	width:100px;
+}
+.tbl-list colgroup .author{
+	width:100px;
+}
+.tbl-list colgroup .hits{
+	width:100px;
+}
+.tbl-list td{
+	text-align:center;
+}
+.tbl-list td a{
+	text-align:left;
+	text-decoration:none;
+
+	/* 말줄임 처리 */
+	overflow:hidden;
+	display:inline-block;
+	max-width:100%;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	vertical-align:middle;
+}
+
+/* paging navigation */
+.paging{
+	
+}

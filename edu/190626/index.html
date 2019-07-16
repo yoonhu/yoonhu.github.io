@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>css 속성 기초</title>
+
+ <style>
+	 /* reset */
+	 *{
+		 margin: 0;
+		 padding: 0;
+		 line-height: 1;
+		 color: #222;
+		 font-size: 15px;
+		 box-sizing: border-box;
+	 }
+	 html,body{
+		 /* height:5000px; */
+	 }
+	 #boxWrap{
+
+	 }
+	 .boxwrap{
+		 	position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 500px;
+			height: 500px;
+			margin:auto;
+			border: 1px solid#000;
+			/* border-radius: 50%; */
+			border-radius: 10px 50px 0 0;
+	 }
+	 .boxwrap div{
+		/* position: absolute;
+		position: static;
+		position: relative; 
+		position: fixed;  */
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		background-color: aqua;
+	 }
+	 .boxwrap .box1{
+		top: 40px;
+		background-color:chocolate;
+	 }
+	 .boxwrap .box2{
+		top: 40px;
+		right: 0;
+		background-color:chartreuse;
+	 }
+	 .boxwrap .box3{
+		 /* contents box 가운데 정렬하는 방법1 */
+	/* 	top: 50%;
+		left: 50%;
+		margin-top: -50px;
+		margin-left: -50px;
+ */
+		/* 2번째 방법 */
+	/* 	top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin:auto; */
+
+		/* 3번째 방법 (유용)*/
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		background-color:blue;
+	 }
+	 .boxwrap .box4{
+		bottom: 0;
+		right: 0;
+		background-color:beige;
+	 }
+	 .boxwrap .box5{
+		bottom: 0;
+		left: 0;
+		background-color:aquamarine;
+	 }
+ </style>
+
+</head>
+<body>
+	<div id="boxWrap" class="boxwrap">
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		<div class="box4"></div>
+		<div class="box5"></div>
+	</div>
+
+	<!-- 
+		overflow
+		visibility
+		display
+
+		position
+		top
+		right
+		bottom
+		left
+		z-index
+
+		float (레이아웃 잡을 때 이용)
+		clear
+
+		width
+		height
+		margin (시계방향으로 씀), margin: 0 auto; margin: 0 auto 0 margin: 0 auto 0 auto 
+		mrarin-top:0;
+		margin-right:0;
+		margin-bottom:0;
+		margin-left:0;
+		padding:0;
+		padding:0 0;
+		padding:0 0 0;
+		padding:0 0 0 0;
+		padding-top:0;
+		padding-right:0;
+		padding-bottom:0;
+		padding-left:0;
+
+		border:1px solid black;(축약형, 보통이렇게 사용)
+		border-top-width:2px;
+		border-top:1px solid black;
+		border-right:1px solid black;
+		border-bottom:1px solid black;
+		border-left:1px solid black;
+		border-style:solid,dotted,dashed;(실선, 점선, 대쉬선)
+		border-width:1px;(두께)
+		border-color:black;(색상)
+		border-top-color:bule;
+		color 값 지정 방식 - black, #000000, #000 rgb(0,0,0), rgba(0,0,0,투명도)
+
+
+		border-radius
+
+		background
+		color
+		font-size
+		font-family
+		font-weight 두께조절
+		
+
+		box-shadow
+		text-shadow
+
+		box-sizing:border-box
+
+		transform
+		cursor:pointer 커서모양변경
+		
+	 -->
+</body>
+</html>

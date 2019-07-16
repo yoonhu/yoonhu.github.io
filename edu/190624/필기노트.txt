@@ -1,0 +1,13 @@
+div 옵션 id, class(btn, col3, btn-modify, blue, md)
+id 값은 하나만 가능 
+
+-CSS 불러오기 방법
+1. linkd 방식 : head 안에서 <link rel="stylesheet" type="text/css" href="css경로"> 
+2. styled 방식 : head 안에서 <style>css문법작성</style> 
+3. import 방식 : head 안에서 @import url(css경로);
+4. 인라인 스타일 방식 : <div style=""></div>
+
+css 구조(http://uxcss.com/edu/_guide/ppt.html 참고)
+중괄호 안에 작성, 
+세미콜론으로 구분
+
