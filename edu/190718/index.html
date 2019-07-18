@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>네비게이션 예제</title>
+	<link rel="stylesheet" href="fonts/font.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+	<div class="navigation vertical">
+		<nav class="nav">
+			<ul class="gnb">
+				<li class="dep1"><a href="#">메뉴1</a>
+				<ul class="dep2">
+					<li><a href="#">메뉴1-1</a></li>
+					<li><a href="#">메뉴1-2</a></li>
+					<li><a href="#">메뉴1-3</a></li>
+				</ul>
+				</li>
+				<li class="dep1"><a href="#">메뉴2</a>
+					<ul class="dep2">
+						<li><a href="#">메뉴2-1</a></li>
+						<li><a href="#">메뉴2-2</a></li>
+						<li><a href="#">메뉴2-3</a></li>
+					</ul>
+				</li>
+				<li class="dep1"><a href="#">메뉴3</a>
+					<ul class="dep2">
+						<li><a href="#">메뉴3-1</a></li>
+						<li><a href="#">메뉴3-2</a></li>
+						<li><a href="#">메뉴3-3</a></li>
+					</ul>
+				</li>
+				<li class="dep1"><a href="#">메뉴4</a>
+					<ul class="dep2">
+						<li><a href="#">메뉴4-1</a></li>
+						<li><a href="#">메뉴4-2</a></li>
+						<li><a href="#">메뉴4-3</a></li>
+					</ul>
+				</li>
+				<li class="dep1"><a href="#">메뉴5</a>
+					<ul class="dep2">
+						<li><a href="#">메뉴5-1</a></li>
+						<li><a href="#">메뉴5-2</a></li>
+						<li><a href="#">메뉴5-3</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<!-- //.nav -->
+	</div>
+	<!-- //.navigation -->
+
+	<a href="#lyPopup" class="btn btn-default">레이어 클릭</a>
+	<div id="lyPopup" class="lywrap">
+		<div class="lycnt">
+			<h2>레이어 타이틀</h2>
+			<div class="lyhead"></div>
+			<div class="lybody">
+				<table>
+					<caption>테이블 표</caption>
+					<colgroup>
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">html</th>
+							<th scope="col">css</th>
+							<th scope="col">javascript</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>html,head,body</td>
+							<td>overflow,position,display</td>
+							<td>변수,상수,지역변수,전역변수</td>
+						</tr>
+						<tr>
+							<td>html,head,body</td>
+							<td>overflow,position,display</td>
+							<td>변수,상수,지역변수,전역변수</td>
+						</tr>
+						<tr>
+							<td>html,head,body</td>
+							<td>overflow,position,display</td>
+							<td>변수,상수,지역변수,전역변수</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="lyfoot"></div>
+			<a href="#" class="btn btn-lyclose">레이어닫기</a>
+		</div>
+	</div>
+</body>
+</html>

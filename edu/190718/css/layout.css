@@ -1,0 +1,192 @@
+/* navigation */
+.navigation{
+	margin: 50px 0;
+	background-color: #222;
+}
+.nav{
+	width: 1000px;
+	margin: 0 auto;
+}
+.gnb{
+
+}
+.gnb::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+/* nav > depth1 */
+.gnb .dep1{
+	float: left;
+	position: relative;
+	width: calc(100% / 5);
+	text-align: center;
+}
+.gnb .dep1 > a{
+	display: inline-block;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background-color: #222;
+	color: #fff;
+}
+/* nav > depth2 */
+.gnb .dep2{
+	/*display: none;
+	*/width: 100%;
+	position: absolute;
+	background-color: rgba(0,0,0,.5);
+	text-align: left;
+	top: -150px;
+	/*효과주기위한방법*/overflow: hidden;
+	/*height: 0;*/
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-ms-transition: all 1s;
+	-o-transition: all 1s;
+}
+/* 효과주기위한 방법 */
+.gnb .dep2 > li{
+	padding: 5px;
+	line-height: 20px;
+}
+.gnb .dep2 > li > a{
+	display: block;
+	padding: 0 5px;
+	color: #fff;
+}
+
+
+/* nav > depth1 hover */
+.gnb .dep1:hover{
+	
+}
+.gnb .dep1:hover > a{
+	background-color: #fff;
+	color: #222;
+}
+/* nav > depth1 hover시 depth2 stlye */
+.gnb .dep1:hover .dep2{
+/* 	display:block; */
+	height: 150px;
+	top: 40px;
+	background-color: rgba(0,0,0,1);
+}
+.gnb .dep1:hover .dep2 > li{
+
+}
+.gnb .dep1:hover .dep2 > li > a{
+	
+}
+.gnb .dep2 > li > a:hover{
+	background-color: rgba(255,255,255,.5);
+	color: #222;
+}
+/* nav > depth1 활성화 */
+.gnb .dep1.on > a{
+background-color: #fff;
+color: #222;
+}
+
+/* 세로구조의 navigation */
+.navigation.vertical{
+	background-color: #fff;
+}
+.navigation.vertical .nav{
+	position: relative;
+	width: 300px;
+	margin: 0;
+}
+/* nav > depth1 */
+.navigation.vertical .gnb .dep1{
+	position: static;
+	float: none;
+	width: 100%;
+}
+/* nav > depth2 */
+.navigation.vertical .gnb .dep2{
+	display:none;
+	top: 0;
+	left: 300px;
+	width:100%;
+	height: 200px;
+}
+/* nav > depth1 hover시 depth2 stlye */
+.navigation.vertical .gnb .dep1:hover .dep2{
+	display: block;
+	top: 0;
+	left: 300px;
+}
+
+/* 레이어 스타일 */
+.lywrap{
+	overflow: hidden;
+	/*display: none;
+	*/position: fixed;
+	/*top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	*/top: 50%;
+	left: 50%;
+	z-index: 10;
+	width: 0;
+	height: 0;
+	background-color: rgba(0,0,0,.5);
+	transition:all .5s;
+	-webkit-transition:all .5s;
+	-moz-transition:all .5s;
+	-ms-transition:all .5s;
+	-o-transition:all .5s;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+}
+.lywrap:target{
+	/* display: block; */
+	width: 100%;
+	height: 100%;
+}
+.lycnt{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background-color: #fff;
+	border: 1px solid #222;
+	box-shadow: 0 0 5px $fff;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+}
+.lycnt h2{
+	
+}
+.lycnt .lyhead{
+	
+}
+.lycnt .lybody{
+	
+}
+.lycnt .lyfoot{
+	
+}
+.lycnt table{
+	max-width: 700px;
+}
+.lycnt th,td{
+	padding: 8px 10px;
+	border: 1px solid #ddd;
+}
+.lycnt td{
+	text-align: center;	
+}
+.lycnt .btn-lyclose{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
