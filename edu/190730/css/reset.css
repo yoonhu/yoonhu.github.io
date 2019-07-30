@@ -1,0 +1,164 @@
+/* reset */
+html,body,div,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,thead,tbody,tfoot,form,fieldset,legend,caption,tr,th,td,header,footer,section,article,nav,address,figure,figcaption,span,i,em,strong,b,ins,del,a,img,input,select,textarea{
+	margin:0;
+	padding:0;
+	font-family:'Montserrat','Noto Sans KR','맑은 고딕';
+	font-size:15px;
+	color:#222;
+	/* vertical-align:middle; */
+	border:0;
+	list-style:none;
+	font-style:normal;
+	box-sizing:border-box;
+}
+*::before,
+*::after{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+/* html5 요소 처리 - 하위브라우저IE */
+header,footer,nav,main,section,article,address,aside{
+	display:block;
+}
+
+address,em,i{
+	font-style:normal;
+}
+table{
+	width:100%;
+	table-layout:fixed;
+	border-spacing:0;
+	border-collapse:collapse;
+}
+th,td{
+	border:0;
+}
+.clear{
+	clear:both;
+}
+.clear::after{
+	content:"";
+	display:block;
+	clear:both;
+	width:100%;
+}
+a{
+	text-decoration:none;
+}
+/* 숨김처리 */
+.tts{
+	overflow:hidden;
+	position:absolute;
+	/* top:-999em; */
+	z-index:-1;
+	width:1px;
+	height:1px;
+	color:transparent;
+}
+/* text-align */
+.t-left{
+	text-align:left!important;
+}
+.t-center{
+	text-align:center!important;
+}
+.t-right{
+	text-align:right!important;
+}
+
+/* form style */
+label,input,select,textarea{
+	vertical-align:middle;
+}
+label{
+	display:inline-block;
+}
+input[type="text"],
+input[type="password"]{
+	min-height:20px;
+	padding:0 5px;
+	border:1px solid #ccc;
+}
+select{
+	border:1px solid #ccc;
+}
+textarea{
+	width:100%;
+	border:1px solid #ccc;
+}
+button{
+	cursor:pointer;
+}
+.chkbox input{
+	overflow:hidden;
+	position:absolute;
+	/* top:-999em; */
+	z-index:-1;
+	width:1px;
+	height:1px;
+	color:transparent;
+}
+.chkbox span{
+	display:inline-block;
+	height:20px;
+	padding-left:30px;
+	background-repeat:no-repeat;
+	background-position:0 50%;
+	background-size:20px 20px;
+	background-image:url('image/icon/ico_s1_off.png');
+	line-height:20px;
+}
+.chkbox input:checked + span{
+	background-image:url('image/icon/ico_s1_on.png');
+}
+/* button style */
+.btnarea{
+	width:800px;
+	margin:20px auto;
+	text-align:center;
+}
+.btnarea::after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.btn{
+	min-width:80px;
+	min-height:20px;
+	padding:5px 10px;
+	border:1px solid #d7d7d7;
+	color:#222;
+	font-size:13px;
+	text-align:center;
+}
+.btn-list{
+
+}
+.btn-confirm{
+
+}
+.btn-cancel{
+
+}
+.btn-write{
+
+}
+.btn-edit{
+
+}
+.btn-close{
+
+}
+.btn-post{
+
+}
+.sm{
+
+}
+.md{
+
+}
+.big{
+
+}
