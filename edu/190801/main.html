@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>기업사이트 데모</title>
+	<link rel="stylesheet" href="fonts/font.css">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap" rel="stylesheet"> -->
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/rwd.css">
+</head>
+<body>
+	<div class="headerwrap">
+		<header class="header">
+			<h1><a href="index.html"><img src="image/logo.png" alt="Logo"></a></h1>
+			<ul class="tnb">
+				<li><a href="#">HOME</a></li>
+				<!-- 로그인 전 -->
+				<li><a href="#">LOGIN</a></li>
+				<li><a href="#">JOIN</a></li>
+				<!-- 로그인 후 -->
+				<!-- <li><a href="#">LOGOUT</a></li>
+				<li><a href="#">MYINFO</a></li> -->
+			</ul>
+			<!-- <button class="btn-nav"><span>메뉴</span></button> -->
+				<input type="checkbox" id="btnNav">
+				<label for="btnNAv" class="btn-nav">메뉴</label>
+			<nav class="nav">
+				<ul class="gnb">
+					<li class="dep1"><a href="sub.html">회사소개</a>
+						<ul class="dep2">
+							<li><a href="#">회사소개</a></li>
+							<li><a href="#">CEO인사말</a></li>
+							<li><a href="#">연혁</a></li>
+							<li><a href="#">조직도</a></li>
+							<li><a href="#">찾아오시는 길</a></li>
+						</ul>
+					</li>
+					<li class="dep1"><a href="#">사업영역</a></li>
+					<li class="dep1"><a href="#">제품소개</a></li>
+					<li class="dep1"><a href="#">서비스안내</a></li>
+					<li class="dep1"><a href="#">고객지원</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- //.header -->
+	</div>
+	<!-- //.headerwrap -->
+
+	<div class="mainvisual">
+		<div class="visual">
+			<div class="vtxt">
+				<strong>e-business partner</strong>
+				<p>고객과 함께 지식을 나누며<br>최고의 품질을 서비스하기 위해 노력합니다.</p>
+			</div>
+		</div>
+	</div>
+	<!-- //.mainvisual -->
+	<div class="container">
+		<main class="main">
+			<section>
+				<h2 class="tts">빠른메뉴</h2>
+				<div class="qmenu">
+					<a href="#">
+						<span><i class="icon"></i><strong>회사소개</strong></span>
+					</a>
+					<a href="#">
+						<span><img src="image/ico_02.png" alt=""><strong>제품소개</strong></span>
+					</a>
+					<a href="#">
+						<span><strong>자료실</strong></span>
+					</a>
+					<a href="#">
+						<span><strong>FAQ</strong></span>
+					</a>
+				</div>
+				<!-- //.qmenu -->
+			</section>
+			<section>
+				<article class="notice">
+					<h2>공지사항</h2>
+					<ul>
+						<li><a href="#">공지사항 최근글입니다.공지사항 최근글입니다.공지사항 최근글입니다.공지사항 최근글입니다.</a></li>
+						<li><a href="#">공지사항 최근글입니다.</a></li>
+						<li><a href="#">공지사항 최근글입니다.</a></li>
+						<li><a href="#">공지사항 최근글입니다.</a></li>
+					</ul>
+					<a href="#" class="more" title="공지사항 더보기">더보기+</a>
+				</article>
+				<article class="qna">
+					<h2>Q&#38;A</h2>
+					<ul>
+						<li><a href="#">Q&#38;A 최근글입니다.Q&#38;A 최근글입니다.Q&#38;A 최근글입니다.Q&#38;A 최근글입니다.</a></li>
+						<li><a href="#">Q&#38;A 최근글입니다.</a></li>
+						<li><a href="#">Q&#38;A 최근글입니다.</a></li>
+						<li><a href="#">Q&#38;A 최근글입니다.</a></li>
+					</ul>
+					<a href="#" class="more" title="Q&A 더보기">더보기+</a>
+				</article>
+				<article class="gallery">
+					<h2>사업갤러리</h2>
+					<div class="list">
+						<a href="#">
+							<span>갤러리내용입니다.갤러리내용입니다.</span>
+						</a>
+						<a href="#">
+							<span>갤러리내용입니다.갤러리내용입니다.</span>
+						</a>
+						<a href="#">
+							<span>갤러리내용입니다.갤러리내용입니다.</span>
+						</a>
+						<a href="#">
+							<span>갤러리내용입니다.갤러리내용입니다.</span>
+						</a>
+					</div>
+					<a href="#" class="more" title="사업갤러리 더보기">더보기+</a>
+				</article>
+			</section>
+		</main>
+		<!-- //.main -->
+	</div>
+	<!-- //.container -->
+
+
+	<div class="footerwrap">
+		<footer class="footer">
+			<div class="customer">
+				<h2>CUSTOMER</h2>
+				<p class="tel">T.000.0000.0000 / F.000.0000.0000</p>
+				<p class="time">평일 09:30 ~ 18:30 / 주말 09:30 ~ 13:00</p>
+				<div class="fmenu">
+					<a href="#">이용약관</a>
+					<a href="#"><strong>개인정보취급방침</strong></a>
+					<a href="#">회사소개</a>
+				</div>
+			</div>
+			<div class="info">
+				<address>서울특별시 구로구 구로동 디지털단지</address>
+				<p>COPYRIGHT &copy; All right serverd</p>
+			</div>
+		</footer>
+		<!-- //.footer -->
+	</div>
+	<!-- //.footerwrap -->
+</body>
+</html>
