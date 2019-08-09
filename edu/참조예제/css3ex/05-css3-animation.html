@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>animation, css3</title>
+	<style>
+	body {
+		width: 800px; 
+		margin: 0 auto;
+		font: 12px 'arial',sans-serif;
+	}
+	.box {
+		width: 100px;
+		height: 100px;
+		background-color: purple;
+		/*animation: ani 1s;*/
+		/*animation: ani 1s forwards;*/
+		animation: ani 1s alternate infinite ease-in;
+		cursor: pointer;
+	}
+	.box:hover {
+		animation-play-state: paused;
+	}
+
+	@keyframes ani {
+		0% {width: 100px; background-color: purple}
+		100% {width: 100%; background-color: navy}
+	}
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<h1>animation</h1>
+	<div class="box">
+		
+	</div>
+</div>	
+</body>
+</html>

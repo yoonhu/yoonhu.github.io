@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>FAQ Layout</title>
+
+<!-- CSS Type -->
+<link rel="stylesheet" type="text/css" href="css/uiReset.css" />
+<link rel="stylesheet" type="text/css" href="css/uiLayout.css" />
+<link rel="stylesheet" type="text/css" href="css/uiPopup.css" />
+
+<!-- Script Type -->
+<script type="text/javascript" src="js/plugin/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/common/gnb.js"></script>
+<script type="text/javascript">
+$(function(){
+
+});
+</script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="js/plugin/html5.js"></script>
+<script type="text/javascript" src="js/plugin/css3-mediaqueries.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<div class="wrap">
+	<div class="header">
+		<div class="headerwrap">
+			<h1><a href="index.html">LOGO</a></h1>
+			
+			<div class="tnb">
+				<a href="index.html">HOME</a>
+			</div>
+			<!-- //.tnb -->
+			
+			<div class="navigation">
+				<div id="gnbArea" class="nav">
+					<h2 id="gnbTitle"><a href="#snbTitle" title="주메뉴 건너띄기">주메뉴</a></h2>
+					<ul id="gnbNav" class="gnb">
+						<li class="gnb_depth1 gm1"><a href="list.html" class="gnblink">게시판</a>
+							<div class="gnb_depth2">
+								<ul>
+									<li><a href="list.html">목록</a></li>
+									<li><a href="view.html">내 용</a></li>
+									<li><a href="write.html">글쓰기</a></li>
+									<li><a href="join.html">회원가입</a></li>
+									<li><a href="schedule.html">일정</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="gnb_depth1 gm2"><a href="tabmenu.html" class="gnblink">탭메뉴</a>
+							<!-- 
+							<div class="gnb_depth2">
+								<ul>
+									<li><a href=""></a></li>
+								</ul>
+							</div>
+							 -->
+						</li>
+						<li class="gnb_depth1 gm3"><a href="pagination.html" class="gnblink">페이지리스트</a>
+							<!-- 
+							<div class="gnb_depth2">
+								<ul>
+									<li><a href=""></a></li>
+								</ul>
+							</div>
+							 -->
+						</li>
+						<li class="gnb_depth1 gm4"><a href="post.html" class="gnblink">팝업</a>
+							<div class="gnb_depth2">
+								<ul>
+									<li><a href="post.html">우편번호</a></li>
+									<li><a href="idpw.html">아이디/비밀번호</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<!-- //#gnb -->
+					<script type="text/javascript">
+					//<![CDATA[
+						$(function(){
+							// mCurrent - 1뎁스메뉴 활성화 번호, sCurrent - 2뎁스메뉴 활성화 번호,
+							$("#gnbNav").gnb({ mCurrent : 0, sCurrent : 0 });
+						});
+					//]]>
+					</script>
+				</div>
+				<!-- //.nav -->
+			</div>
+			<!-- //.navigation -->
+			
+		</div>
+		<!-- //.headerwrap -->
+	</div>
+	<!-- //.header -->
+	
+	<div class="visual">
+		<div class="visualwrap">
+			Visual Area
+		</div>
+		<!-- //.visualwrap -->
+	</div>
+	<!-- //.visual -->
+	
+	<div class="container">
+		<div class="sidebar">
+			<h2 id="snbTitle">왼쪽 타이틀</h2>
+			<ul class="snb">
+				<li><a href="list.html">목 록</a></li>
+				<li><a href="view.html">내 용</a></li>
+				<li><a href="write.html">글쓰기</a></li>
+				<li class="current"><a href="faq.html">FAQ</a></li>
+				<li><a href="join.html">회원가입</a></li>
+				<li><a href="schedule.html">일정</a></li>
+				<li><a href="post.html" class="clear">우편번호</a></li>
+				<li><a href="tabmenu.html">탭메뉴</a></li>
+				<li><a href="pagination.html">페이지리스트</a></li>
+			</ul>
+			<!-- //.snb -->
+		</div>
+		<!-- //.sidebar -->
+		
+		<div class="csection">
+			
+			<div class="titlewrap">
+				<h2 id="cTitle">FAQ</h2>
+				<div class="location">
+					<span class="home">HOME</span>&gt;<span>게시판</span>&gt;<strong>FAQ</strong>
+				</div>
+				<!-- //.location -->
+			</div>
+			<!-- //.titlewrap -->
+
+			<div class="chead">
+				콘텐츠 상단영역
+			</div>
+			<!-- //.chead -->
+
+			<div class="cbody">
+			
+				<div class="tapmenu">
+					<ul>
+						<li><a href="list.html" class="current">목록</a></li>
+						<li><a href="view.html">내용</a></li>
+						<li><a href="write.html">글쓰기</a></li>
+						<li><a href="join.html">회원가입</a></li>
+						<li><a href="schedule.html">일정</a></li>
+						<li><a href="post.html">우편번호</a></li>
+						<li><a href="tabmenu.html">탭메뉴</a></li>
+						<li><a href="pagination.html">페이지리스트</a></li>
+					</ul>
+				</div>
+				<!-- //.tapmenu -->
+
+				<h3>UL Type1 Faq List</h3>
+				<div class="faqlist ultype1">
+					<ul>
+						<li class="faqitem hide">
+							<div class="q">
+								<a href="javascript:;" class="faqlink">Q:질문1 무엇으로 마크업 해야 하나요?</a>
+							</div>
+							<div class="a">
+								A:비 순차 목록, 순차 목록, 정의 목록으로 마크업 할 수 있습니다. 더 나아가 각각의 항목 안에서 '질문'과 '답변'을 무엇으로 마크업 할 것인지에 대하여는 많은 고민이 필요 합니다.
+							</div>
+						</li>
+						<li class="faqitem hide">
+							<div class="q">
+								<a href="javascript:;" class="faqlink">Q:질문2 무엇으로 마크업 해야 하나요?</a>
+							</div>
+							<div class="a">
+								A:비 순차 목록, 순차 목록, 정의 목록으로 마크업 할 수 있습니다. 더 나아가 각각의 항목 안에서 '질문'과 '답변'을 무엇으로 마크업 할 것인지에 대하여는 많은 고민이 필요 합니다.
+							</div>
+						</li>
+						<li class="faqitem hide">
+							<div class="q">
+								<a href="javascript:;" class="faqlink">Q:질문3 무엇으로 마크업 해야 하나요?</a>
+							</div>
+							<div class="a">
+								A:비 순차 목록, 순차 목록, 정의 목록으로 마크업 할 수 있습니다. 더 나아가 각각의 항목 안에서 '질문'과 '답변'을 무엇으로 마크업 할 것인지에 대하여는 많은 고민이 필요 합니다.
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<h3>DL Type1 Faq List</h3>
+				<div class="faqlist dltype1">
+					<dl>
+						<dt><a href="javascript:;" class="faqlink">Q:질문1 무엇으로 마크업 해야 하나요?</a></dt>
+						<dd class="faqitem">
+								A:비 순차 목록, 순차 목록, 정의 목록으로 마크업 할 수 있습니다. 더 나아가 각각의 항목 안에서 '질문'과 '답변'을 무엇으로 마크업 할 것인지에 대하여는 많은 고민이 필요 합니다.
+						</dd>
+						<dt><a href="javascript:;" class="faqlink">Q:질문2 무엇으로 마크업 해야 하나요?</a></dt>
+						<dd class="faqitem">
+								A:비 순차 목록, 순차 목록, 정의 목록으로 마크업 할 수 있습니다. 더 나아가 각각의 항목 안에서 '질문'과 '답변'을 무엇으로 마크업 할 것인지에 대하여는 많은 고민이 필요 합니다.
+						</dd>
+						<dt><a href="javascript:;" class="faqlink">Q:질문3 무엇으로 마크업 해야 하나요?</a></dt>
+						<dd class="faqitem">
+								A:비 순차 목록, 순차 목록, 정의 목록으로 마크업 할 수 있습니다. 더 나아가 각각의 항목 안에서 '질문'과 '답변'을 무엇으로 마크업 할 것인지에 대하여는 많은 고민이 필요 합니다.
+						</dd>
+					</dl>
+				</div>
+				<!-- //.faqlist -->
+
+				<h3>DL Type2 Faq List</h3>
+				<div class="faqlist dltype2">
+					<dl>
+						<dt><a href="javascript:;" class="faqlink">Q:질문1 무엇으로 마크업 해야 하나요?</a></dt>
+						<dd class="faqitem">
+								A:비 순차 목록, 순차 목록, 정의 목록으로 마크업 할 수 있습니다. 더 나아가 각각의 항목 안에서 '질문'과 '답변'을 무엇으로 마크업 할 것인지에 대하여는 많은 고민이 필요 합니다.
+						</dd>
+						<dt><a href="javascript:;" class="faqlink">Q:질문2 무엇으로 마크업 해야 하나요?</a></dt>
+						<dd class="faqitem">
+								A:비 순차 목록, 순차 목록, 정의 목록으로 마크업 할 수 있습니다. 더 나아가 각각의 항목 안에서 '질문'과 '답변'을 무엇으로 마크업 할 것인지에 대하여는 많은 고민이 필요 합니다.
+						</dd>
+						<dt><a href="javascript:;" class="faqlink">Q:질문3 무엇으로 마크업 해야 하나요?</a></dt>
+						<dd class="faqitem">
+								A:비 순차 목록, 순차 목록, 정의 목록으로 마크업 할 수 있습니다. 더 나아가 각각의 항목 안에서 '질문'과 '답변'을 무엇으로 마크업 할 것인지에 대하여는 많은 고민이 필요 합니다.
+						</dd>
+					</dl>
+				</div>
+				<!-- //.faqlist -->
+
+				<h3>DL Type3 Faq List</h3>
+				<div class="faqlist dltype3">
+					<dl>
+						<dt><a href="javascript:;" class="faqlink">Q:질문1 무엇으로 마크업 해야 하나요?</a></dt>
+						<dd class="faqitem">
+								A:비 순차 목록, 순차 목록, 정의 목록으로 마크업 할 수 있습니다. 더 나아가 각각의 항목 안에서 '질문'과 '답변'을 무엇으로 마크업 할 것인지에 대하여는 많은 고민이 필요 합니다.
+						</dd>
+						<dt><a href="javascript:;" class="faqlink">Q:질문2 무엇으로 마크업 해야 하나요?</a></dt>
+						<dd class="faqitem">
+								A:비 순차 목록, 순차 목록, 정의 목록으로 마크업 할 수 있습니다. 더 나아가 각각의 항목 안에서 '질문'과 '답변'을 무엇으로 마크업 할 것인지에 대하여는 많은 고민이 필요 합니다.
+						</dd>
+						<dt><a href="javascript:;" class="faqlink">Q:질문3 무엇으로 마크업 해야 하나요?</a></dt>
+						<dd class="faqitem">
+								A:비 순차 목록, 순차 목록, 정의 목록으로 마크업 할 수 있습니다. 더 나아가 각각의 항목 안에서 '질문'과 '답변'을 무엇으로 마크업 할 것인지에 대하여는 많은 고민이 필요 합니다.
+						</dd>
+					</dl>
+				</div>
+				<!-- //.faqlist -->
+				<script type="text/javascript">
+				$(function(){
+					/* S::FAQ UL Type1 */
+					var faqItem = $('.ultype1 .faqitem');
+					faqItem.addClass('hide');
+					faqItem.find('.a').slideUp(100);
+					$('.ultype1 .faqlink').bind("click", function(){
+						var faqList = $(this).parents('.ultype1 .faqitem:first');
+						if(faqList.hasClass('hide')){
+							faqItem.addClass('hide').removeClass('show');
+							faqItem.find('.a').slideUp(100);
+							faqList.removeClass('hide').addClass('show');
+							faqList.find('.a').slideDown(100);
+						} else {
+							faqList.removeClass('show').addClass('hide');
+							faqList.find('.a').slideUp(100);
+						}
+					});
+					/* E::FAQ UL Type1 */
+
+					/* S::FAQ DL Type1 */
+					$('.dltype1 dl dt:first').addClass('active');
+					$('.dltype1 .faqitem').hide();
+					$('.dltype1 .faqitem:first').show();
+					$('.dltype1 .faqlink').bind("click", function(){
+						$(this).parent().next().siblings('dd').slideUp('fast');
+						$(this).parent().next().slideDown('fast');
+						$('.dltype1 dt').removeClass('active');
+						$(this).parent().addClass('active');
+					});
+					/* E::FAQ DL Type1 */
+
+					/* S::FAQ DL Type2 */
+					$('.dltype2 .faqitem').hide();
+					$('.dltype2 .faqlink').bind("click", function(){
+						$(this).parent().next('dd').slideToggle('fast').siblings('dd:visible').slideUp('fast');
+						$('.dltype2 dt').removeClass('active');
+						$(this).parent().addClass('active');
+					});
+					/* E::FAQ DL Type2 */
+
+					/* S::FAQ DL Type3 */
+					$('.dltype3').find('dd').hide().end().find('.faqlink').bind("click", function(){
+						$(this).parent().next().slideToggle('fast');
+					});
+					/* E::FAQ DL Type3 */
+				});
+				</script>
+
+
+				<div class="btnarea text_right">
+					<a href="write.html" class="btn btn-write">글쓰기</a>
+					<a href="write.html" class="btn">글쓰기</a>
+				</div>
+				<!-- //.btnarea -->
+				
+				<div class="pagiarea">
+					<div class="pagination">
+						<a href="javascript:;" class="first" title="처음 목록페이지로 이동">&lt;&lt;</a>
+						<a href="javascript:;" class="prev" title="이전 목록페이지로 이동">&lt;</a>
+						<span class="current">1</span>
+						<a href="javascript:;">2</a>
+						<a href="javascript:;">3</a>
+						<a href="javascript:;">4</a>
+						<a href="javascript:;">5</a>
+						<a href="javascript:;">6</a>
+						<a href="javascript:;">7</a>
+						<a href="javascript:;">8</a>
+						<a href="javascript:;">9</a>
+						<a href="javascript:;">10</a>
+						<a href="javascript:;" class="next" title="다음 목록페이지로 이동">&gt;</a>
+						<a href="javascript:;" class="last" title="마지막 목록페이지로 이동">&gt;&gt;</a>
+					</div>
+					<!-- //.pagination -->
+				</div>
+				<!-- //.pagiarea -->
+
+			</div>
+			<!-- //.cbody -->
+
+			<div class="cfoot">
+				콘텐츠 하단영역
+			</div>
+			<!-- //.cfoot -->
+
+		</div>
+		<!-- //.csection -->
+		
+		<div class="aside">
+		</div>
+		<!-- //.aside -->
+	</div>
+	<!-- //.container -->
+	
+	<div class="banner">
+		<div class="bannerwrap">
+			하단배너 영역
+		</div>
+		<!-- //.bannerwrap -->
+	</div>
+	<!-- //.banner -->
+	
+	<div class="footer">
+		<div class="footerwrap">
+			<address>주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소</address>
+			<p class="tel">Tel (02)000-0000 FAX (02)000-0000</p>
+			<p class="copyright">Copyright &copy; 2015 All rights Reserved.</p>
+		</div>
+		<!-- //.footerwrap -->
+	</div>
+	<!-- //.footer -->
+</div>
+<!-- //.wrap -->
+</body>
+</html>

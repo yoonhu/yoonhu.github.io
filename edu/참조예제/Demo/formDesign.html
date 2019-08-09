@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]> <html lang="ko" class="ie-old"> <![endif]-->
+<!--[if IE 8]> <html lang="ko" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="ko" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="ko"> <!--<![endif]-->
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>폼요소</title>
+<!-- CSS Type -->
+<link rel="stylesheet" type="text/css" href="css/uiReset.css" />
+<!-- Script Type -->
+<script type="text/javascript" src="js/jquery/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">window.jQuery || document.write('<script src="https://code.jquery.com/jquery-1.11.3.min.js"><\/script>')</script>
+
+<style type="text/css">
+.wrap{margin:0;padding:0;}
+h1{width:90%;margin:0 auto;}
+.script{width:90%;margin:20px auto;padding:20px;border:1px solid #000;box-sizing:border-box;}
+.css{width:90%;margin:20px auto;padding:20px;border:1px solid #000;box-sizing:border-box;}
+.selectarea{width:90%;margin:20px auto;padding:20px;border:1px solid #000;box-sizing:border-box;}
+.section{margin:0 0 30px 0;}
+ul{}
+ul li{padding:10px 0;}
+
+
+/* input-radio script */
+.jsrlabel{position:relative;margin:0 0 0 20px;padding:0 0 0 12px;background:url(images/common/radio_bg.png) no-repeat 0 1px;font-size:13px;}
+.jsrlabel:first-child{margin-left:0;}
+.jsrlabel .radio{position:absolute;top:1px;right:-13px;}
+.jsrlabel .icoradio{overflow:hidden;display:inline-block;width:12px;height:12px;margin-top:-2px;line-height:0;background:url(images/common/input.png) no-repeat;font-size:0;vertical-align:middle;}
+.jsrlabel.checked{background-position:0 -27px;}
+.jsrlabel.checked .icoradio{background-position:-20px 0;}
+
+/* input-checkbox script */
+.jsclabel{position:relative;margin:0 0 0 20px;line-height:1.5;padding:4px 15px 4px 35px;box-shadow:0 0 0 1px rgba(0,0,0,.1);border-radius:5px;background:rgba(255,255,255,1) url(images/common/bg_checkbox.png) no-repeat 15px -49px;font-size:13px;}
+.jsclabel:first-child{margin-left:0;}
+.jsclabel .checkbox{}
+.jsclabel .icocheck{overflow:hidden;display:inline-block;width:13px;height:13px;margin-top:-1px;line-height:0;background:url(images/common/input.png) -40px 0 no-repeat;font-size:0;vertical-align:middle;}
+.jsclabel.checked{background-position:0 6px;color:#555;}
+.jsclabel.checked .icocheck {background-position:-60px 0;}
+
+/* input-radio css */
+.cssrlabel{margin:0 0 0 20px;}
+.cssrlabel:first-child{margin-left:0;}
+.cssrlabel input[type="radio"]{margin-top:0;}
+.cssrlabel input[type="radio"]:checked{}
+.cssrlabel label{display:inline-block;padding:0 0 0 16px;background:url(images/common/radio_bg.png) no-repeat 0 0px;font-size:13px;}
+.cssrlabel input[type="radio"]:checked + label{background-position:0 -28px;}
+
+/* input-checkbox css */
+.cssclabel{margin:0 0 0 20px;}
+.cssclabel:first-child{margin-left:0;}
+.cssclabel input[type="checkbox"]{}
+.cssclabel input[type="checkbox"]:checked{}
+.cssclabel label{display:inline-block;padding:1px 0 1px 20px;background:url(images/common/bg_checkbox.png) no-repeat 0 -55px;font-size:14px;}
+.cssclabel input[type="checkbox"]:checked + label{background:url(images/common/bg_checkbox.png) no-repeat 0 0;}
+
+/* Selectbox Design Style Type1 */
+.seltype1 label{position:relative;display:inline-block;}
+.seltype1 select{top:0;left:0;padding:5px;border:1px solid #666;background:#fff;font-size:13px;box-sizing:border-box;}
+.selectbox{width:auto;padding:5px 7px;border:1px solid #000;background:#f6f6f6;color:#838383;font-size:13px;font-family:Tahoma;box-sizing:border-box;}
+.selectbox:after{content:'';display:inline-block;width:20px;height:10px;background:url(images/common/bul_arrow_bottom_gray.gif) no-repeat 100% 50%;}
+
+/* Selectbox Design Style Type2 */
+.selectdesign{display:inline-block;position:relative;margin-right:6px;border:1px solid #c8c8c8;background:#f6f6f6;}
+.selectdesign:after{content:'';position:absolute;top:50%;right:0;display:inline-block;width:15px;height:10px;margin-top:-5px;background:url(images/common/bul_arrow_bottom_gray.gif) no-repeat 0 50%;}
+.selectdesign select{position:relative;font-size:13px;z-index:20;box-sizing:border-box;}
+.optionbox{display:inline-block;position:absolute;top:0;left:0;padding:5px 7px;font-size:13px;z-index:10;box-sizing:border-box;}
+
+/* Selectbox Design Style Type3 */
+.seltype3{}
+.seltype3 select{padding:0 5px;border:0px solid #666;background:#fff;font-size:12px;box-sizing:border-box;}
+.seltype3 label{position:relative;padding:4px 5px;border:1px solid #666;box-sizing:border-box;}
+.seltype3 label:after{content:"▼";display:inline-block;width:10px;height:10px;padding:0 0 0 10px;text-align:center;}
+.seltype3 .option{}
+</style>
+
+<script type="text/javascript">
+/* input radio/checkbox design */
+function setuplabel() {
+
+	if ($('.jsclabel input').length) {
+		$('.jsclabel').each(function(){ 
+			$(this).removeClass('checked');
+		});
+		$('.jsclabel input:checked').each(function(){ 
+			$(this).parent('label').addClass('checked');
+		});
+	};
+
+	if ($('.jsrlabel input').length) {
+		$('.jsrlabel').each(function(){ 
+			$(this).removeClass('checked');
+		});
+		$('.jsrlabel input:checked').each(function(){ 
+			$(this).parent('label').addClass('checked');
+		});
+	};
+};
+
+/* S: selectbox design type1 */
+(function($){
+	jQuery.browser={};(function(){jQuery.browser.msie=false;
+	jQuery.browser.version=0;if(navigator.userAgent.match(/MSIE ([0-9]+)\./)){
+	jQuery.browser.msie=true;jQuery.browser.version=RegExp.$1;}})();
+
+	$.fn.extend({
+		selectStyle : function(options) {
+			if(!$.browser.msie || ($.browser.msie&&$.browser.version>6)){
+				return this.each(function() {
+					var currentSelected = $(this).find(':selected');
+					$(this).wrap('<label />');
+					$(this).after('<span class="selectbox">'+currentSelected.text()+'</span>').css({position:'absolute', opacity:0,fontSize:$(this).next().css('font-size')});
+					var selectBoxSpan = $(this).next();
+					selectBoxSpan.css({display:'inline-block'});
+					/*
+					var selectBoxHeight = parseInt(selectBoxSpan.height()) + parseInt(selectBoxSpan.css('padding-top')) + parseInt(selectBoxSpan.css('padding-bottom'));
+					$(this).height(selectBoxHeight).change(function(){
+						selectBoxSpan.text($(this).find(':selected').text()).addClass('changed');
+					});
+					*/
+					var selectBoxHeight = parseInt(selectBoxSpan.height());
+					$(this).height(selectBoxHeight).change(function(){
+						selectBoxSpan.text($(this).find(':selected').text()).addClass('changed');
+					});
+				});
+			}
+		}
+	});
+})(jQuery);
+/* E: selectbox design type1 */
+
+/* S: selectbox design type2 */
+$(function(){
+	function selectBox(){
+		$(".seltype2 select").each(function(e){
+			$(this).wrap('<label class="selectdesign"></label>');
+			$(this).after('<span class="optionbox">&nbsp;</span>');
+			$(this).css({
+				"opacity":"0",
+				"padding-top":$(".optionbox").css('padding-top'),
+				"padding-bottom":$(".optionbox").css('padding-bottom')
+			});
+			//$(".selectdesign").eq(e).width($(this).width());
+			/*
+			$(".optionbox").eq(e).css({
+				//"width":parseInt($(this).width()) - parseInt($(".optionbox").css('padding-left'))
+				"width":parseInt($(this).width())
+			});
+			*/
+			$(".optionbox").eq(e).text($("option:selected",this).text())
+			$(this).change(function(){
+				$(this).next().text($("option:selected",this).text());
+			});
+		});
+	}; 
+	if($(".seltype2 select").size() != 0){
+		selectBox();
+	}
+});
+/* E: selectbox design type2 */
+
+$(document).ready(function(){
+	$('.jsclabel, .jsrlabel').click(function(){
+		setuplabel();
+	});
+	$('.seltype1 select').selectStyle(); //selectbox design type1
+});
+
+/*
+function check_radio() {
+	for(i=0;i<f.elements.length;i++) {
+		if(f.elements[i].name=='radio') {
+			if(f.elements[i].checked == true) {
+				break;
+			}
+		}
+	}
+}
+*/
+</script>
+</head>
+
+<body>
+<div class="wrap">
+	<h1 style="margin-bottom:10px">Radio / Check Box / Select Box Design</h1>
+
+	<div class="script">
+		<div class="section">
+			<h2>Radio Style(JavaScript)</h2>
+			<ul>
+				<li>
+					<label class="jsrlabel">
+						<input type="radio" class="radio" name="radio">
+						<span class="icoradio">선택</span> 전체
+					</label>
+					<label class="jsrlabel">
+						<input type="radio" class="radio" name="radio">
+						<span class="icoradio">선택</span> 예체능
+					</label>
+					<label class="jsrlabel">
+						<input type="radio" class="radio" name="radio">
+						<span class="icoradio">선택</span> 공무원
+					</label>
+				</li>
+				<li>
+					<label class="jsrlabel">
+						<input type="radio" class="radio" name="radio">
+						<span class="icoradio">선택</span> 지역
+					</label>
+					<label class="jsrlabel">
+						<input type="radio" class="radio" name="radio">
+						<span class="icoradio">선택</span> 서울시
+					</label>
+					<label class="jsrlabel">
+						<input type="radio" class="radio" name="radio">
+						<span class="icoradio">선택</span> 경기도
+					</label>
+				</li>
+			</ul>
+		</div>
+
+		<div class="section">
+			<h2>CheckBox Style(JavaScript)</h2>
+			<ul>
+				<li>
+					<label class="jsclabel">
+						<input type="checkbox" class="checkbox">
+						<span class="icocheck">선택</span> 영화
+					</label>
+					<label class="jsclabel">
+						<input type="checkbox" class="checkbox">
+						<span class="icocheck">선택</span> 음악
+					</label>
+				</li>
+				<li>
+					<label class="jsclabel">
+						<input type="checkbox" class="checkbox">
+						<span class="icocheck">선택</span> 스포츠
+					</label>
+					<label class="jsclabel">
+						<input type="checkbox" class="checkbox">
+						<span class="icocheck">선택</span> 예술
+					</label>
+				</li>
+				<li>
+					<label class="jsclabel">
+						<input type="checkbox" class="checkbox">
+						<span class="icocheck">선택</span> 문학
+					</label>
+					<label class="jsclabel">
+						<input type="checkbox" class="checkbox">
+						<span class="icocheck">선택</span> 경제
+					</label>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="css">
+		<div class="section">
+			<h2>Radio Style(CSS)</h2>
+			<ul>
+				<li>
+					<span class="cssrlabel">
+						<input type="radio" id="radio1" class="radio" name="radio">
+						<label for="radio1">전체</label>
+					</span>
+					<span class="cssrlabel">
+						<input type="radio" id="radio2" class="radio" name="radio">
+						<label for="radio2">예체능</label>
+					</span>
+					<span class="cssrlabel">
+						<input type="radio" id="radio3" class="radio" name="radio">
+						<label for="radio3">공무원</label>
+					</span>
+				</li>
+			</ul>
+		</div>
+
+		<div class="section">
+			<h2>CheckBox Style(CSS)</h2>
+			<ul>
+				<li>
+					<span class="cssclabel">
+						<input type="checkbox" id="chk1" class="checkbox">
+						<label for="chk1">영화</label>
+					</span>
+					<span class="cssclabel">
+						<input type="checkbox" id="chk2" class="checkbox">
+						<label for="chk2">음악</label>
+					</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="selectarea">
+		<div class="section">
+			<h2>SelectBox Style(select design type1)</h2>
+			<ul class="seltype1">
+				<li>
+					<select>
+						<option>전체</option>
+						<option>영화</option>
+						<option>음악</option>
+						<option>스포츠</option>
+					</select>
+				</li>
+				<li>
+					<select>
+						<option>지역선택</option>
+						<option>서울특별시</option>
+						<option>경기도</option>
+						<option>인천광역시</option>
+					</select>
+				</li>
+				<li>
+					<select>
+						<option>읍/면/동</option>
+						<option>방배동</option>
+						<option>가산동</option>
+					</select>
+				</li>
+			</ul>
+		</div>
+
+		<div class="section">
+			<h2>SelectBox Style(select design type2)</h2>
+			<ul class="seltype2">
+				<li>
+					<select>
+						<option>전체</option>
+						<option>영화</option>
+						<option>음악</option>
+						<option>스포츠</option>
+					</select>
+				</li>
+				<li>
+					<select>
+						<option>지역선택</option>
+						<option>서울특별시</option>
+						<option>경기도</option>
+						<option>인천광역시</option>
+					</select>
+				</li>
+				<li>
+					<select>
+						<option>읍/면/동</option>
+						<option>방배동</option>
+						<option>가산동</option>
+					</select>
+				</li>
+			</ul>
+		</div>
+
+		<div class="section">
+			<h2>SelectBox Style(select design type3)</h2>
+			<script type="text/javascript">
+				$(function(){
+					$('.seltype3 select').change( function(){
+						uxSelectBox( this ); // 셀렉트 박스 선택이 바뀔때 "셀렉트박스 요소" 를 함수로 전달
+					});
+				})
+				function uxSelectBox(o){
+					var val = $( ':selected', o).val(); // 전달받은 "셀렉트박스 요소" 에서 선택된 것 찾기
+					$('.seltype3 .option').text(val).attr('tabindex','0').focus();
+				}
+			</script>
+			<ul class="seltype3">
+				<li>
+					<label>
+						<span class="option">전체</span>
+						<select>
+							<option>전체</option>
+							<option>영화</option>
+							<option>음악</option>
+							<option>스포츠</option>
+						</select>
+					</label>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</div>
+<script>
+$(function() { 
+	$('.tab>div').hide();
+	$('.tab div:eq(0)').show();
+	$('.tab li').click(function(){   
+		$('.tab li').each(function(){
+			$(this).find('img').attr('src', $(this).find('img').attr('src').replace('_on','_off'))
+		})
+		$(this).find('img').attr('src', $(this).find('img').attr('src').replace('_off','_on'))
+		var tabIndex = $(this).index();
+		$('.tab>div').eq(tabIndex).show().siblings('div').hide();
+	})
+});
+</script>
+
+ 
+
+<div class="tab">
+	<ul>
+		<li style="display:inline-block;"><a href="javascript:;"><img src="../images/common/tab_2010_on.png" alt="2010" /></a></li>
+		<li style="display:inline-block;"><a href="javascript:;"><img src="../images/common/tab_2000_off.png" alt="2000" /></a></li>
+		<li style="display:inline-block;"><a href="javascript:;"><img src="../images/common/tab_1990_off.png" alt="1990" /></a></li>
+	</ul>
+	<div style="height:500px;">1</div>
+	<div style="height:500px;">2</div>
+	<div style="height:500px;">3</div>
+</div>
+</body>
+</html>

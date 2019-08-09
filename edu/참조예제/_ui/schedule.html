@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Schedule</title>
+
+<!-- CSS Type -->
+<link rel="stylesheet" type="text/css" href="css/uiReset.css" />
+<link rel="stylesheet" type="text/css" href="css/uiLayout.css" />
+<link rel="stylesheet" type="text/css" href="css/uiPopup.css" />
+
+<!-- Script Type -->
+<script type="text/javascript" src="js/plugin/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/common/gnb.js"></script>
+<script type="text/javascript">
+$(function(){
+	/* Top Layer Banner */
+	$('.toplayer_banner .btn_closelayer').on("click", function(){
+		$('.toplayer_banner').slideUp();
+	});
+});
+</script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="js/plugin/html5.js"></script>
+<script type="text/javascript" src="js/plugin/css3-mediaqueries.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<div class="wrap">
+	<div class="header">
+		<div class="headerwrap">
+			<h1><a href="index.html">LOGO</a></h1>
+			
+			<div class="tnb">
+				<a href="index.html">HOME</a>
+			</div>
+			<!-- //.tnb -->
+			
+			<div class="navigation">
+				<div id="gnbArea" class="nav">
+					<h2 id="gnbTitle"><a href="#snbTitle" title="주메뉴 건너띄기">주메뉴</a></h2>
+					<ul id="gnbNav" class="gnb">
+						<li class="gnb_depth1 gm1"><a href="list.html" class="gnblink">게시판</a>
+							<div class="gnb_depth2">
+								<ul>
+									<li><a href="list.html">목록</a></li>
+									<li><a href="view.html">내 용</a></li>
+									<li><a href="write.html">글쓰기</a></li>
+									<li><a href="join.html">회원가입</a></li>
+									<li><a href="schedule.html">일정</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="gnb_depth1 gm2"><a href="tabmenu.html" class="gnblink">탭메뉴</a>
+							<!-- 
+							<div class="gnb_depth2">
+								<ul>
+									<li><a href=""></a></li>
+								</ul>
+							</div>
+							 -->
+						</li>
+						<li class="gnb_depth1 gm3"><a href="pagination.html" class="gnblink">페이지리스트</a>
+							<!-- 
+							<div class="gnb_depth2">
+								<ul>
+									<li><a href=""></a></li>
+								</ul>
+							</div>
+							 -->
+						</li>
+						<li class="gnb_depth1 gm4"><a href="post.html" class="gnblink">팝업</a>
+							<div class="gnb_depth2">
+								<ul>
+									<li><a href="post.html">우편번호</a></li>
+									<li><a href="idpw.html">아이디/비밀번호</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<!-- //#gnb -->
+					<script type="text/javascript">
+					//<![CDATA[
+						$(function(){
+							// mCurrent - 1뎁스메뉴 활성화 번호, sCurrent - 2뎁스메뉴 활성화 번호,
+							$("#gnbNav").gnb({ mCurrent : 0, sCurrent : 0 });
+						});
+					//]]>
+					</script>
+				</div>
+				<!-- //.nav -->
+			</div>
+			<!-- //.navigation -->
+			
+		</div>
+		<!-- //.headerwrap -->
+	</div>
+	<!-- //.header -->
+	
+	<div class="visual">
+		<div class="visualwrap">
+			Visual Area
+		</div>
+		<!-- //.visualwrap -->
+	</div>
+	<!-- //.visual -->
+	
+	<div class="container">
+		<div class="sidebar">
+			<h2 id="snbTitle">왼쪽 타이틀</h2>
+			<ul class="snb">
+				<li><a href="list.html">목 록</a></li>
+				<li><a href="view.html">내 용</a></li>
+				<li><a href="write.html">글쓰기</a></li>
+				<li><a href="join.html">회원가입</a></li>
+				<li class="current"><a href="schedule.html">일정</a></li>
+				<li><a href="post.html" class="clear">우편번호</a></li>
+				<li><a href="tabmenu.html">탭메뉴</a></li>
+				<li><a href="pagination.html">페이지리스트</a></li>
+			</ul>
+			<!-- //.snb -->
+		</div>
+		<!-- //.sidebar -->
+		
+		<div class="csection">
+			
+			<div class="chead">
+				<h2 id="cTitle">일정</h2>
+				<div class="location">
+					<span class="home">HOME</span>&gt;<span>게시판</span>&gt;<strong>일정</strong>
+				</div>
+				<!-- //.location -->
+			</div>
+			<!-- //.chead -->
+			
+			<div class="cbody">
+
+				<div class="tapmenu">
+					<ul>
+						<li><a href="list.html">목록</a></li>
+						<li><a href="view.html">내용</a></li>
+						<li><a href="write.html">글쓰기</a></li>
+						<li><a href="join.html">회원가입</a></li>
+						<li><a href="schedule.html" class="current">일정</a></li>
+						<li><a href="post.html">우편번호</a></li>
+						<li><a href="tabmenu.html">탭메뉴</a></li>
+						<li><a href="pagination.html">페이지리스트</a></li>
+					</ul>
+				</div>
+				<!-- //.tabmenu -->
+				
+				
+				<div class="calender">
+					<div class="calender_head">
+						<a href="javascript:;" class="prev_month" title="이전달 선택"><span>&lt;이전</span></a>
+						<span class="selectdate">
+							2015.03.03
+						</span>
+						<a href="javascript:;" class="next_month" title="다음달 선택"><span>다음&gt;</span></a>
+					</div>
+					<!-- //.calender_head -->
+					
+					<div class="calender_body">
+						<table>
+						<caption>일정달력</caption>
+						<colgroup>
+							<col style="width:14%" />
+							<col style="width:14%" />
+							<col style="width:14%" />
+							<col style="width:14%" />
+							<col style="width:14%" />
+							<col style="width:14%" />
+							<col style="width:14%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col" class="sunday">일</th>
+								<th scope="col" class="monday">월</th>
+								<th scope="col" class="tuesday">화</th>
+								<th scope="col" class="wednesday">수</th>
+								<th scope="col" class="thursday">목</th>
+								<th scope="col" class="friday">금</th>
+								<th scope="col" class="saturday">토</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="sun prev_day">
+									<div class="days">1</div>
+									<ul>
+										<li>sun</li>
+										<li>prev_day</li>
+									</ul>
+								</td>
+								<td>
+									<div class="days">2</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+								<td class="today">
+									<div class="days">3</div>
+									<ul>
+										<li><a href="#" title="전체일정리뷰">전체일정리뷰</a></li>
+										<li><a href="#" title="11:00~11:30">11:00~11:30</a></li>
+									</ul>
+								</td>
+								<td>
+									<div class="days">4</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+								<td>
+									<div class="days">5</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+								<td>
+									<div class="days">6</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+								<td class="sat">
+									<div class="days">7</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td class="sun">
+									<div class="days">8</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+								<td>
+									<div class="days">9</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+								<td>
+									<div class="days">10</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+								<td>
+									<div class="days">11</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+								<td>
+									<div class="days">12</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+								<td>
+									<div class="days">13</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+								<td class="sat">
+									<div class="days">14</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td class="sun">
+									<div class="days">15</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+								<td>
+									<div class="days">16</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+								<td>
+									<div class="days">17</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+								<td>
+									<div class="days">18</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+								<td>
+									<div class="days">19</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+								<td>
+									<div class="days">20</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+								<td class="sat">
+									<div class="days">21</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td class="sun">
+									<div class="days">22</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+								<td>
+									<div class="days">23</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+								<td>
+									<div class="days">24</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+								<td>
+									<div class="days">25</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+								<td>
+									<div class="days">26</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+								<td class="holiday">
+									<div class="days">27</div>
+									<ul>
+										<li>공휴일이면 좋을듯...</li>
+									</ul>
+								</td>
+								<td class="sat">
+									<div class="days">28</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="sun">
+									<div class="days">29</div>
+								</td>
+								<td>
+									<div class="days">30</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+								<td>
+									<div class="days">31</div>
+									<ul>
+										<li>하루 div</li>
+										<li>days</li>
+									</ul>
+								</td>
+								<td class="next_day">
+									<div class="days">1</div>
+									<ul>
+										<li>다음달</li>
+										<li>next_day</li>
+									</ul>
+								</td>
+								<td class="next_day">
+									<div class="days">2</div>
+									<ul>
+										<li>다음달</li>
+										<li>next_day</li>
+									</ul>
+								</td>
+								<td class="next_day">
+									<div class="days">3</div>
+									<ul>
+										<li>다음달</li>
+										<li>next_day</li>
+									</ul>
+								</td>
+								<td class="sat next_day">
+									<div class="days">4</div>
+									<ul>
+										<li>다음달</li>
+										<li>next_day</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td class="sun"></td>
+								<td></td>
+								<td></td>
+								<td class="next_day"></td>
+								<td class="next_day"></td>
+								<td class="next_day"></td>
+								<td class="sat next_day"></td>
+							</tr>
+						</tbody>
+						</table>
+					</div>
+					<!-- //.calender_body -->
+					<script>
+					$( "td:empty" )
+						.text( "Was empty!" )
+						.css( "background", "rgb(255,220,200)" );
+					</script>
+				</div>
+				<!-- //.calender -->
+				
+				<div class="pagiarea">
+					<div class="pagination">
+						<a href="javascript:;" class="first" title="처음 목록페이지로 이동">&lt;&lt;</a>
+						<a href="javascript:;" class="prev" title="이전 목록페이지로 이동">&lt;</a>
+						<span class="current">1</span>
+						<a href="javascript:;">2</a>
+						<a href="javascript:;">3</a>
+						<a href="javascript:;">4</a>
+						<a href="javascript:;">5</a>
+						<a href="javascript:;">6</a>
+						<a href="javascript:;">7</a>
+						<a href="javascript:;">8</a>
+						<a href="javascript:;">9</a>
+						<a href="javascript:;">10</a>
+						<a href="javascript:;" class="next" title="다음 목록페이지로 이동">&gt;</a>
+						<a href="javascript:;" class="last" title="마지막 목록페이지로 이동">&gt;&gt;</a>
+					</div>
+					<!-- //.pagination -->
+				</div>
+				<!-- //.pagiarea -->
+
+			</div>
+			<!-- //.cbody -->
+			
+		</div>
+		<!-- //.csection -->
+		
+		<div class="aside">
+		</div>
+		<!-- //.aside -->
+	</div>
+	<!-- //.container -->
+	
+	<div class="banner">
+		<div class="bannerwrap">
+			하단배너 영역
+		</div>
+		<!-- //.bannerwrap -->
+	</div>
+	<!-- //.banner -->
+	
+	<div class="footer">
+		<div class="footerwrap">
+			<address>주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소</address>
+			<p class="tel">Tel (02)000-0000 FAX (02)000-0000</p>
+			<p class="copyright">Copyright &copy; 2015 All rights Reserved.</p>
+		</div>
+		<!-- //.footerwrap -->
+	</div>
+	<!-- //.footer -->
+</div>
+<!-- //.wrap -->
+</body>
+</html>

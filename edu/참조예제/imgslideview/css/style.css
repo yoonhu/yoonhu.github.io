@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/* basic */
+*, html, body {margin:0; padding:0;}
+div, table, th, td, p, span, form, fieldset, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, img, iframe, a, header, footer, aside, section, article, nav, hr, strong {margin:0; padding:0; border:0; vertical-align:top;}
+header, footer, aside, section, article, nav {display:block}
+div, table, th, td {border-collapse:collapse;}
+input, button {vertical-align:middle;}
+img {height:auto: border:0; vertical-align:top;}
+button {margin:0; padding:0; border:0; background:none;}
+ul, ol, li {list-style:none;}
+a {text-decoration:none; vertical-align:top;}
+i {font-style:normal;}
+caption, .hide {position:absolute !important; top:-9999px !important; display:block !important; width:0 !important; height:0 !important; margin:0 !important; padding:0 !important; line-height:0 !important; font-size:0 !important; text-indent:-9999px !important;}
+/* 아이폰 가로모드 텍스트 크기 조정 */
+* {-webkit-text-size-adjust:none}
+
+
+
+.view_layer {display:none; position:fixed; left:0; top:0; z-index:9999; width:100%; height:100%; background:#000; color:#fff; overflow:hidden;}
+.view_layer .bx-wrapper {position:fixed; left:0; top:0; width:100%; height:100%;}
+.view_layer .bx-viewport {position:relative; height:100% !important;}
+.view_layer .bx-viewport ul {height:100%;}
+.view_layer .bx-viewport ul:after {display:block; clear:both; content:"";}
+.view_layer .bx-viewport li {height:100%; overflow:hidden;}
+.view_layer .img {background:red; overflow:hidden;}
+.view_layer img {position:absolute; left:0; top:50%;
+	-ms-transform:translate(0, -50%);
+	-webkit-transform:translate(0, -50%);
+	transform:translate(0, -50%);
+}
+.view_layer .txt {position:absolute; left:0; bottom:0; width:100%; padding:20px 15px; line-height:20px; font-size:13px !important; color:#fff !important; background:rgba(0,0,0,0.7);
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.view_layer .bx-has-pager {position:absolute; left:0; top:0; width:100%; line-height:50px; text-align:center; font-size:15px; color:#aaa; background:rgba(0,0,0,0.7)}
+.view_layer .bx-controls-direction a {position:fixed; top:50%; width:60px; height:60px; margin-top:-30px; font-size:0; text-indent:-9999px; background-size:13px auto;}
+.view_layer .bx-prev {left:0; background:url(../img/view_prev.png) no-repeat center center;}
+.view_layer .bx-next {right:0; background:url(../img/view_next.png) no-repeat center center;}
+.view_layer .view_close {position:fixed; right:0; top:0; width:50px; height:50px; font-size:0; text-indent:-9999px; background:url(../img/view_close.png) no-repeat center center; background-size:16px;}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>transform, css3</title>
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	html,body {
+		width: 100%;
+		height: 100%;
+	}
+	body {
+		width: 800px; 
+		margin: 0 auto;
+		font: 12px 'arial',sans-serif;
+		perspective: 1000px;
+		perspective-origin: 50% 50%;
+	}
+	.photo {
+		width: 200px;
+		transition: all 1s;
+	}
+	.photo:target {
+		/*transform: translate(300px,200px);*/
+		/*transform: translateZ(500px);*/
+		transform: translate3d(300px,250px,800px);
+	}
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<h1>transform</h1>
+	<div class="btn_area">
+		<a href="#pic">translate</a> | <a href="#">re</a>
+	</div>
+	<hr>
+	<img src="img/photo.jpg" id="pic" class="photo" alt="">
+</div>	
+</body>
+</html>

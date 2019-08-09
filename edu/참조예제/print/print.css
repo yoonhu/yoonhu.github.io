@@ -1,0 +1,36 @@
+.btn {
+  border: 1px solid #000;
+}
+.btn-print {
+  width: 100px;
+  height: 40px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+.csection {
+  position: relative;
+}
+.csection table thead th {
+  padding: 10px;
+  border: 1px solid #000;
+  background: #f5f5f5;
+}
+.csection table tbody {
+  overflow: auto;
+  height: 200px;
+  border: 1px solid;
+}
+.csection table tbody td {
+  padding: 10px 5px;
+  border-bottom: 1px dotted #777;
+  text-align: center;
+}
+.csection table tbody td a {
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+}

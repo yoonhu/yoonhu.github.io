@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>List</title>
+
+<!-- CSS Type -->
+<link rel="stylesheet" type="text/css" href="css/uiReset.css" />
+<link rel="stylesheet" type="text/css" href="css/uiLayout.css" />
+<link rel="stylesheet" type="text/css" href="css/uiPopup.css" />
+
+<!-- Script Type -->
+<script type="text/javascript" src="js/plugin/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/common/gnb.js"></script>
+<script type="text/javascript">
+$(function(){
+
+});
+</script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="js/plugin/html5.js"></script>
+<script type="text/javascript" src="js/plugin/css3-mediaqueries.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<div class="wrap">
+	<div class="header">
+		<div class="headerwrap">
+			<h1><a href="index.html">LOGO</a></h1>
+			
+			<div class="tnb">
+				<a href="index.html">HOME</a>
+			</div>
+			<!-- //.tnb -->
+			
+			<div class="navigation">
+				<div id="gnbArea" class="nav">
+					<h2 id="gnbTitle"><a href="#snbTitle" title="주메뉴 건너띄기">주메뉴</a></h2>
+					<ul id="gnbNav" class="gnb">
+						<li class="gnb_depth1 gm1"><a href="list.html" class="gnblink">게시판</a>
+							<div class="gnb_depth2">
+								<ul>
+									<li><a href="list.html">목록</a></li>
+									<li><a href="view.html">내 용</a></li>
+									<li><a href="write.html">글쓰기</a></li>
+									<li><a href="join.html">회원가입</a></li>
+									<li><a href="schedule.html">일정</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="gnb_depth1 gm2"><a href="tabmenu.html" class="gnblink">탭메뉴</a>
+							<!-- 
+							<div class="gnb_depth2">
+								<ul>
+									<li><a href=""></a></li>
+								</ul>
+							</div>
+							 -->
+						</li>
+						<li class="gnb_depth1 gm3"><a href="pagination.html" class="gnblink">페이지리스트</a>
+							<!-- 
+							<div class="gnb_depth2">
+								<ul>
+									<li><a href=""></a></li>
+								</ul>
+							</div>
+							 -->
+						</li>
+						<li class="gnb_depth1 gm4"><a href="post.html" class="gnblink">팝업</a>
+							<div class="gnb_depth2">
+								<ul>
+									<li><a href="post.html">우편번호</a></li>
+									<li><a href="idpw.html">아이디/비밀번호</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<!-- //#gnb -->
+					<script type="text/javascript">
+					//<![CDATA[
+						$(function(){
+							// mCurrent - 1뎁스메뉴 활성화 번호, sCurrent - 2뎁스메뉴 활성화 번호,
+							$("#gnbNav").gnb({ mCurrent : 0, sCurrent : 0 });
+						});
+					//]]>
+					</script>
+				</div>
+				<!-- //.nav -->
+			</div>
+			<!-- //.navigation -->
+			
+		</div>
+		<!-- //.headerwrap -->
+	</div>
+	<!-- //.header -->
+	
+	<div class="visual">
+		<div class="visualwrap">
+			Visual Area
+		</div>
+		<!-- //.visualwrap -->
+	</div>
+	<!-- //.visual -->
+	
+	<div class="container">
+		<div class="sidebar">
+			<h2 id="snbTitle">왼쪽 타이틀</h2>
+			<ul class="snb">
+				<li class="current"><a href="list.html">목 록</a></li>
+				<li><a href="view.html">내 용</a></li>
+				<li><a href="write.html">글쓰기</a></li>
+				<li><a href="join.html">회원가입</a></li>
+				<li><a href="schedule.html">일정</a></li>
+				<li><a href="post.html" class="clear">우편번호</a></li>
+				<li><a href="tabmenu.html">탭메뉴</a></li>
+				<li><a href="pagination.html">페이지리스트</a></li>
+			</ul>
+			<!-- //.snb -->
+		</div>
+		<!-- //.sidebar -->
+		
+		<div class="csection">
+			
+			<div class="titlewrap">
+				<h2 id="cTitle">목록 회원가입 회원가입 회원가입 회원가입 회원가입 회원가입 회원가입 회원가입 회원가입 회원가입</h2>
+				<script type="text/javascript">
+					$(function(){
+						$("#cTitle").each(function(){
+							if($(this).text().length > 30) {
+								$(this).text($(this).text().substr(0, 27));
+								$(this).append('...');
+							}
+						});
+					});
+				</script>
+				<div class="location">
+					<span class="home">HOME</span>&gt;<span>게시판</span>&gt;<strong>목록</strong>
+				</div>
+				<!-- //.location -->
+			</div>
+			<!-- //.titlewrap -->
+
+			<div class="chead">
+				콘텐츠 상단영역
+			</div>
+			<!-- //.chead -->
+			
+			<div class="cbody">
+				<div class="tapmenu">
+					<ul>
+						<li><a href="list.html" class="current">목록</a></li>
+						<li><a href="view.html">내용</a></li>
+						<li><a href="write.html">글쓰기</a></li>
+						<li><a href="join.html">회원가입</a></li>
+						<li><a href="schedule.html">일정</a></li>
+						<li><a href="post.html">우편번호</a></li>
+						<li><a href="tabmenu.html">탭메뉴</a></li>
+						<li><a href="pagination.html">페이지리스트</a></li>
+					</ul>
+				</div>
+				<!-- //.tapmenu -->
+				
+				
+				<div class="search">
+					<div class="searchwrap">
+						<label><q class="tts">검색어</q>
+							<select id="" title="검색어 선택">
+								<option>제목</option>
+								<option>작성자</option>
+							</select>
+						</label>
+						<label><q class="tts">검색어 입력</q>
+							<input type="text" name="" id="" title="검색어 입력" />
+						</label>
+						<a href="javascript:;" class="btn btn-small btn-search">검색</a>
+						<button class="btn btn-small btn-search">검색</button>
+						<input type="button" value="검색" class="btn btn-small btn-search">
+					</div>
+					<!-- //.searchwrap -->
+				</div>
+				<!-- //.search -->
+				
+				<div class="search">
+					<div class="searchwrap searchstyle">
+						<dl class="table-row rowcell6">
+							<dt class="table-cellth">지역별</dt>
+							<dd class="table-celltd">
+								<label><q class="tts">지역별선택</q>
+									<select id="" title="선택">
+										<option>서울특별시</option>
+										<option>경기도</option>
+										<option>강원도</option>
+										<option>충청북도</option>
+										<option>충청남도</option>
+										<option>전라북도</option>
+										<option>전라남도</option>
+										<option>경상북도</option>
+										<option>경상남도</option>
+										<option>제주도</option>
+									</select>
+								</label>
+							</dd>
+							<dt class="table-cellth">시,군,구</dt>
+							<dd class="table-celltd">
+								<label><q class="tts">시,군,구 선택</q>
+									<select id="" title="선택">
+										<option>광진구</option>
+									</select>
+								</label>
+							</dd>
+							<dt class="table-cellth">읍,면,동</dt>
+							<dd class="table-celltd">
+								<label><q class="tts">읍,면,동 선택</q>
+									<select id="" title="선택">
+										<option>방배동</option>
+									</select>
+								</label>
+							</dd>
+						</dl>
+						<dl class="table-row rowcell2">
+							<dt class="table-cellth">업체명</dt>
+							<dd class="table-celltd">
+								<label><q class="tts">업체명 선택</q>
+									<select id="" title="선택">
+										<option>주식회사(주)</option>
+									</select>
+								</label>
+							</dd>
+						</dl>
+						<dl class="table-row rowcell4">
+							<dt class="table-cellth">업체명</dt>
+							<dd class="table-celltd">
+								<label><q class="tts">업체명 선택</q>
+									<select id="" title="선택">
+										<option>주식회사(주)</option>
+									</select>
+								</label>
+							</dd>
+							<dt class="table-cellth">검색어</dt>
+							<dd class="table-celltd">
+								<label><q class="tts">검색어 입력1</q>
+									<input type="text" name="" id="" style="" title="입력" />
+								</label>
+								<label><q class="tts">검색어 입력2</q>
+									<input type="text" name="" id="" style="" title="입력" />
+								</label>
+								<a href="javascript:;" class="btn btn-small btn-search">검색</a>
+							</dd>
+						</dl>
+						<dl class="table-row rowcell2">
+							<dt class="table-cellth">검색구분</dt>
+							<dd class="table-celltd" style="position:relative;">
+								<div class="rowfield">
+									<label><q class="tts">검색어 입력1</q>
+										<input type="text" name="" id="" style="" title="입력" />
+									</label>
+									<label><q class="tts">검색어 입력2</q>
+										<input type="text" name="" id="" style="" title="입력" />
+									</label>
+								</div>
+								<div class="rowfield">
+									<label><q class="tts">검색어 입력3</q>
+										<input type="text" name="" id="" style="" title="입력" />
+									</label>
+									<a href="javascript:;" class="btn btn-small btn-search">검색</a>
+									<a href="javascript:;" class="btn btn-large btn-search">검색</a>
+								</div>
+							</dd>
+						</dl>
+						<!-- <a href="javascript:;" class="btn btn-large btn-search">검색</a>
+						<button class="btn btn-large btn-search">검색</button>
+						<input type="button" value="검색" class="btn btn-large btn-search"> -->
+					</div>
+					<!-- //.searchwrap -->
+				</div>
+				<!-- //.search -->
+
+				<div class="selectdesign">
+					<script type="text/javascript">
+						$(function(){
+							$('.select_active').bind('click', function(){ 
+								if($(this).attr('class') != 'choice'){
+									$('.select_group').show();
+									$(this).addClass('choice');
+								}else{
+									$(this).removeClass('choice');
+									$('.select_group').hide();
+								}
+							});
+							$('.select_option').bind('click', function(){ 
+								$('.select_active span').text($(this).text());
+								$('.select_active').removeClass('choice');
+								$('.select_group').hide();
+							});
+						});
+					</script>
+					<div class="select">
+						<a href="javascript:;" class="select_active"><span>선택</span></a>
+						<ul class="select_group">
+							<li><a href="javascript:;" class="select_option">공개</a></li>
+							<li><a href="javascript:;" class="select_option">비공개</a></li>
+							<li><a href="javascript:;" class="select_option">마음대로</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="tablestyle tablelist">
+					<table>
+					<caption>목록</caption>
+					<colgroup>
+						<col style="width:10%" />
+						<col />
+						<col style="width:10%" />
+						<col style="width:10%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">번호</th>
+							<th scope="col">제목</th>
+							<th scope="col">작성자</th>
+							<th scope="col">조회수</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>10</td>
+							<td class="text_left"><a href="view.html">목록 게시판입니다.</a></td>
+							<td>관리자</td>
+							<td>1000</td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td class="text_left"><a href="view.html">목록 게시판입니다.</a></td>
+							<td>관리자</td>
+							<td>1000</td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td class="text_left"><a href="view.html">목록 게시판입니다.</a></td>
+							<td>관리자</td>
+							<td>1000</td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td class="text_left"><a href="view.html">목록 게시판입니다.</a></td>
+							<td>관리자</td>
+							<td>1000</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td class="text_left"><a href="view.html">목록 게시판입니다.</a></td>
+							<td>관리자</td>
+							<td>1000</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td class="text_left"><a href="view.html">목록 게시판입니다.</a></td>
+							<td>관리자</td>
+							<td>1000</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td class="text_left"><a href="view.html">목록 게시판입니다.</a></td>
+							<td>관리자</td>
+							<td>1000</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td class="text_left"><a href="view.html">목록 게시판입니다.</a></td>
+							<td>관리자</td>
+							<td>1000</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td class="text_left"><a href="view.html">목록 게시판입니다.</a></td>
+							<td>관리자</td>
+							<td>1000</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td class="text_left"><a href="view.html">목록 게시판입니다.</a></td>
+							<td>관리자</td>
+							<td>1000</td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+				<!-- //.list_table -->
+				
+				<div class="btnarea text_right">
+					<a href="write.html" class="btn btn-write">글쓰기</a>
+					<input type="button" value="글쓰기" class="btn btn-write" />
+					<button class="btn btn-empty btn-write">글쓰기</button>
+					<input type="button" value="글쓰기" class="btn btn-empty btn-write" />
+				</div>
+				<!-- //.btn -->
+				
+				<div class="pagiarea">
+					<div class="pagination">
+						<a href="javascript:;" class="first" title="처음 목록페이지로 이동">&lt;&lt;</a>
+						<a href="javascript:;" class="prev" title="이전 목록페이지로 이동">&lt;</a>
+						<span class="current">1</span>
+						<a href="javascript:;">2</a>
+						<a href="javascript:;">3</a>
+						<a href="javascript:;">4</a>
+						<a href="javascript:;">5</a>
+						<a href="javascript:;">6</a>
+						<a href="javascript:;">7</a>
+						<a href="javascript:;">8</a>
+						<a href="javascript:;">9</a>
+						<a href="javascript:;">10</a>
+						<a href="javascript:;" class="next" title="다음 목록페이지로 이동">&gt;</a>
+						<a href="javascript:;" class="last" title="마지막 목록페이지로 이동">&gt;&gt;</a>
+					</div>
+					<!-- //.pagination -->
+				</div>
+				<!-- //.pagiarea -->
+
+			</div>
+			<!-- //.cbody -->
+
+
+			<div class="cfoot">
+				콘텐츠 하단영역
+			</div>
+			<!-- //.cfoot -->
+
+			<script type="text/javascript">
+				$(function(){
+					$("#one a").click(function(){
+						$('#examContent').load('ex1.html .part');
+						return false;
+					});
+					$("#two a").click(function(){
+						$('#examContent').load('ex2.html .part02');
+						return false;
+					});
+				});
+			</script>
+			<div class="tapmenu">
+				<ul class="taptest">
+					<li id="one"><a href="write.html" class="current">글쓰기</a></li>
+					<li id="two"><a href="view.html">내용</a></li>
+				</ul>
+			</div>
+			<!-- //.tapmenu -->
+
+			<div id="examContent">
+			</div>
+
+		</div>
+		<!-- //.csection -->
+		
+		<div class="aside">
+		</div>
+		<!-- //.aside -->
+	</div>
+	<!-- //.container -->
+	
+	<div class="banner">
+		<div class="bannerwrap">
+			하단배너 영역
+		</div>
+		<!-- //.bannerwrap -->
+	</div>
+	<!-- //.banner -->
+	
+	<div class="footer">
+		<div class="footerwrap">
+			<address>주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소</address>
+			<p class="tel">Tel (02)000-0000 FAX (02)000-0000</p>
+			<p class="copyright">Copyright &copy; 2015 All rights Reserved.</p>
+		</div>
+		<!-- //.footerwrap -->
+	</div>
+	<!-- //.footer -->
+</div>
+<!-- //.wrap -->
+</body>
+</html>

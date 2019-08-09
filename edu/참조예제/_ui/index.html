@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Basic Style Tampalte</title>
+
+<!-- CSS Type -->
+<link rel="stylesheet" type="text/css" href="css/uiReset.css" />
+<link rel="stylesheet" type="text/css" href="css/uiMain.css" />
+<link rel="stylesheet" type="text/css" href="css/uiPopup.css" />
+
+<!-- Script Type -->
+<script type="text/javascript" src="js/plugin/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/common/gnb.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="js/plugin/html5.js"></script>
+<script type="text/javascript" src="js/plugin/css3-mediaqueries.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="wrap">
+	<div class="header">
+		<div class="headerwrap">
+			<h1><a href="index.html">LOGO</a></h1>
+			
+			<div class="tnb">
+				<a href="index.html">HOME</a>
+			</div>
+			<!-- //.tnb -->
+			
+			<div class="navigation">
+				<div id="gnbArea" class="nav">
+					<h2 id="gnbTitle"><a href="#snbTitle" title="주메뉴 건너띄기">주메뉴</a></h2>
+					<ul id="gnbNav" class="gnb">
+						<li class="gnb_depth1 gm1"><a href="list.html" class="gnblink">게시판</a>
+							<div class="gnb_depth2">
+								<ul>
+									<li><a href="list.html">목록</a></li>
+									<li><a href="view.html">내 용</a></li>
+									<li><a href="write.html">글쓰기</a></li>
+									<li><a href="join.html">회원가입</a></li>
+									<li><a href="schedule.html">일정</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="gnb_depth1 gm2"><a href="tabmenu.html" class="gnblink">탭메뉴</a>
+							<!-- 
+							<div class="gnb_depth2">
+								<ul>
+									<li><a href=""></a></li>
+								</ul>
+							</div>
+							 -->
+						</li>
+						<li class="gnb_depth1 gm3"><a href="pagination.html" class="gnblink">페이지리스트</a>
+							<!-- 
+							<div class="gnb_depth2">
+								<ul>
+									<li><a href=""></a></li>
+								</ul>
+							</div>
+							 -->
+						</li>
+						<li class="gnb_depth1 gm4"><a href="post.html" class="gnblink">팝업</a>
+							<div class="gnb_depth2">
+								<ul>
+									<li><a href="post.html">우편번호</a></li>
+									<li><a href="idpw.html">아이디/비밀번호</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<!-- //#gnb -->
+					<script type="text/javascript">
+					//<![CDATA[
+						$(function(){
+							// mCurrent - 1뎁스메뉴 활성화 번호, sCurrent - 2뎁스메뉴 활성화 번호,
+							$("#gnbNav").gnb({ mCurrent : 0, sCurrent : 0 });
+						});
+					//]]>
+					</script>
+				</div>
+				<!-- //.nav -->
+			</div>
+			<!-- //.navigation -->
+			
+		</div>
+		<!-- //.headerwrap -->
+	</div>
+	<!-- //.header -->
+	
+	<div class="visual">
+		<div class="visualwrap">
+			Visual Area
+		</div>
+		<!-- //.visualwrap -->
+	</div>
+	<!-- //.visual -->
+	
+	<div class="container">
+		<div class="sidebar">
+			<h2>Left Area</h2>
+		</div>
+		<!-- //.sidebar -->
+		
+		<div class="csection">
+			<h2>Middle Area</h2>
+		</div>
+		<!-- //.csection -->
+		
+		<div class="aside">
+			<h2>Right Area</h2>
+		</div>
+		<!-- //.aside -->
+	</div>
+	<!-- //.container -->
+	
+	<div class="banner">
+		<div class="bannerwrap">
+			하단배너 영역
+		</div>
+		<!-- //.bannerwrap -->
+	</div>
+	<!-- //.banner -->
+	
+	<div class="footer">
+		<div class="footerwrap">
+			<address>주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소</address>
+			<p class="tel">Tel (02)000-0000 FAX (02)000-0000</p>
+			<p class="copyright">Copyright &copy; 2015 All rights Reserved.</p>
+		</div>
+		<!-- //.footerwrap -->
+	</div>
+	<!-- //.footer -->
+</div>
+<!-- //.wrap -->
+</body>
+</html>

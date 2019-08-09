@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no, address=no, email=no, date=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>반응형 네비게이션</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="nav.css">
+	<!--[if lt IE 9]>
+		<script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<button class="btn-mo"><i class="fa fa-navicon"></i><span class="txthide">메뉴열기</span></button>
+	<div class="navigation">
+		<nav class="nav">
+			<ul class="gnb">
+				<li class="dep1"><a href="#">HTML</a>
+					<ul class="dep2">
+						<li><a href="#">HTML</a></li>
+						<li><a href="#">CSS</a></li>
+						<li><a href="#">JAVASCRIPT</a></li>
+						<li><a href="#">JQUERY</a></li>
+						<li><a href="#">ACCESSIBILITY</a></li>
+						<li><a href="#">LESS</a></li>
+						<li><a href="#">SVN</a></li>
+						<li><a href="#">GIT</a></li>
+					</ul>
+				</li>
+				<li class="dep1"><a href="#">CSS</a>
+					<ul class="dep2">
+						<li><a href="#">HTML</a></li>
+						<li><a href="#">CSS</a></li>
+						<li><a href="#">JAVASCRIPT</a></li>
+						<li><a href="#">JQUERY</a></li>
+						<li><a href="#">ACCESSIBILITY</a></li>
+						<li><a href="#">LESS</a></li>
+						<li><a href="#">SVN</a></li>
+						<li><a href="#">GIT</a></li>
+					</ul>
+				</li>
+				<li class="dep1"><a href="#">JAVASCRIPT</a>
+					<ul class="dep2">
+						<li><a href="#">HTML</a></li>
+						<li><a href="#">CSS</a></li>
+						<li><a href="#">JAVASCRIPT</a></li>
+						<li><a href="#">JQUERY</a></li>
+						<li><a href="#">ACCESSIBILITY</a></li>
+						<li><a href="#">LESS</a></li>
+						<li><a href="#">SVN</a></li>
+						<li><a href="#">GIT</a></li>
+					</ul>
+				</li>
+				<li class="dep1"><a href="#">JQUERY</a>
+					<ul class="dep2">
+						<li><a href="#">HTML</a></li>
+						<li><a href="#">CSS</a></li>
+						<li><a href="#">JAVASCRIPT</a></li>
+						<li><a href="#">JQUERY</a></li>
+						<li><a href="#">ACCESSIBILITY</a></li>
+						<li><a href="#">LESS</a></li>
+						<li><a href="#">SVN</a></li>
+						<li><a href="#">GIT</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<div class="bgnav"></div>
+	</div>
+	<script src="../js/jquery/jquery-3.3.1.min.js"></script>
+	<script src="../js/jquery/jquery.easing.min.js"></script>
+	<script src="../js/common/uxDetect.min.js"></script>
+	<script>
+		/* S : Navigation */
+		var $gmIndex = function(index) {return "gm" + (index + 1)},
+		$gmNum = $gmIndex,
+		$gmItem = $(".gnb .dep1"),
+		$gmItemAdd = $gmItem.addClass($gmNum), 
+		$gnbNav = $('.nav'),
+		$gnbNavD1 = $gnbNav.find('>ul>li'),
+		$gnbNavD2 = $gnbNav.find('>ul>li>ul'),
+		$bodypc = $('body').is('.pc'),
+		$bgNav = $('.bgnav');
+
+		//PC Navigation
+		$gnbNav.on('mouseleave', function(){
+			$bgNav.stop().animate({'height':0},300,'swing');
+			$bgNav.removeClass('line');
+		});
+		$gnbNav.find('>.gnb').on('mouseenter focusin', function(){
+			if( $('body').is('.pc') ){
+				$gnbNav.addClass('active');
+				$gnbNavD1.stop().animate({'height':333},300,'swing');
+				$bgNav.stop().animate({'height':280},300,'swing');
+				$bgNav.addClass('line');
+			}
+		}).on('mouseleave', function(){
+			if( $('body').is('.pc') ) navOut();
+		});
+		$gnbNav.find('a:last, >ul>li:first>a:first').on('focusout', function(){
+			if( $('body').is('.pc') ) navOut();
+		});
+		function navOut(){
+			$gnbNav.removeClass('active');
+			$gnbNavD1.removeClass('on').stop().animate({'height':53},300,'swing');
+			$bgNav.stop().animate({'height':0},300,'swing');
+			$bgNav.removeClass('line');
+		}
+		$gnbNavD1.each(function(i, e){
+			$(e).on('mouseenter focusin', function(){
+				if( $('body').is('.pc') ) $(e).addClass('on').siblings().removeClass('on');
+			});
+			$(e).find('a:last').on({
+				focusin:function(){ 
+					if( $('body').is('.pc') ) $(e).addClass('on').next().removeClass('on'); 
+				},
+				focusout:function(){
+					if( $('body').is('.pc') ) $(e).removeClass('on');
+				}
+			});
+		});
+
+		//mo Navigation
+		$('.btn-mo,.bgnav').click(function(){
+			$(this).toggleClass('mb-active');
+			$('.navigation').toggleClass('mb-active');
+			$('body').toggleClass('mb-active');
+		});
+		$gnbNavD1.find('>a').click(function(){
+			if( $('body').is('.mo') ){
+				$(this).next().stop().slideToggle().parent().siblings().children().next().slideUp();
+				$(this).parent().toggleClass("on").siblings().removeClass("on");
+				return false;
+			}
+		});
+
+		var mbStart = false;
+		function rwdpcLayout(){
+			$('body').addClass('pc').removeClass('mo');
+			$gnbNavD2.slideDown();
+			$('.navigation').attr('style','');
+			$('.bgnav').show();
+			$('.mbnav>ul>li>ul').hide();
+			if( $('.navigation').is('.mb-active') ){
+				$('.navigation').removeClass('mb-active');
+				$('body').removeClass('mb-active');
+			}
+			mbStart = false;
+		}
+		function rwdmoLayout(){
+			$('body').removeClass('pc').addClass('mo');
+			//$('.bgnav').hide();
+			$('.navigation').css({'height':$(window).height() - $('.headerwrap').height()});
+			if( $('body').is('.mo') && !mbStart ){
+				$gnbNavD2.slideUp();
+				mbStart = true;
+			}
+		}
+		function rwdLayout(){
+			var breakPoint = 1024;
+			var filter = "win16|win32|win64|mac";
+			if( navigator.platform  ){
+				if( filter.indexOf(navigator.platform.toLowerCase())<0 ){
+					if( $(window).width() > breakPoint ){
+						rwdpcLayout();
+					}else{
+						rwdmoLayout();
+					}
+				}else{
+					if( $(window).width() > breakPoint - 17 ){
+						rwdpcLayout();
+					}else{
+						rwdmoLayout();
+					}
+				}
+			}
+			
+		}
+		
+		$(window).resize(function(){
+			rwdLayout();
+		});
+		$(window).trigger('resize');
+	</script>
+</body>
+</html>

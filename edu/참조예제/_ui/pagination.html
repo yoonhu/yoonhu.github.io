@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Paging</title>
+
+<!-- CSS Type -->
+<link rel="stylesheet" type="text/css" href="css/uiReset.css" />
+<link rel="stylesheet" type="text/css" href="css/uiLayout.css" />
+<link rel="stylesheet" type="text/css" href="css/uiPopup.css" />
+
+<!-- Script Type -->
+<script type="text/javascript" src="js/plugin/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/common/gnb.js"></script>
+<script type="text/javascript">
+$(function(){
+	/* Top Layer Banner */
+	$('.toplayer_banner .btn_closelayer').on("click", function(){
+		$('.toplayer_banner').slideUp();
+	});
+});
+</script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="js/plugin/html5.js"></script>
+<script type="text/javascript" src="js/plugin/css3-mediaqueries.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<div class="wrap">
+			
+	<div class="tapmenu">
+		<ul>
+			<li><a href="list.html">목록</a></li>
+			<li><a href="view.html">내용</a></li>
+			<li><a href="write.html">글쓰기</a></li>
+			<li><a href="join.html">회원가입</a></li>
+			<li><a href="schedule.html">일정</a></li>
+			<li><a href="post.html">우편번호</a></li>
+			<li><a href="tabmenu.html">탭메뉴</a></li>
+			<li><a href="pagination.html" class="current">페이지리스트</a></li>
+		</ul>
+	</div>
+	<!-- //.tapmenu -->
+				
+	<div class="pagiarea">
+		<div class="pagination">
+			<a href="javascript:;" class="first" title="처음 목록페이지로 이동">&lt;&lt;</a>
+			<a href="javascript:;" class="prev" title="이전 목록페이지로 이동">&lt;</a>
+			<span class="current">1</span>
+			<a href="javascript:;">2</a>
+			<a href="javascript:;">3</a>
+			<a href="javascript:;">4</a>
+			<a href="javascript:;">5</a>
+			<a href="javascript:;">6</a>
+			<a href="javascript:;">7</a>
+			<a href="javascript:;">8</a>
+			<a href="javascript:;">9</a>
+			<a href="javascript:;">10</a>
+			<a href="javascript:;" class="next" title="다음 목록페이지로 이동">&gt;</a>
+			<a href="javascript:;" class="last" title="마지막 목록페이지로 이동">&gt;&gt;</a>
+		</div>
+		<!-- //.pagination -->
+	</div>
+	<!-- //.pagiarea -->
+
+	<div class="paginate">
+		<span class="button_first"><a href="javascript:;">처음페이지</a></span>
+		<span class="button_prev"><a href="javascript:;">이전페이지</a></span>
+		<span>
+			<strong class="first">1</strong>
+			<a href="javascript:;">2</a>
+			<a href="javascript:;">3</a>
+			<a href="javascript:;">4</a>
+			<a href="javascript:;">5</a>
+			<a href="javascript:;">6</a>
+			<a href="javascript:;">7</a>
+			<a href="javascript:;">8</a>
+			<a href="javascript:;">9</a>
+			<a href="javascript:;">10</a>
+		</span>
+		<span class="button_next"><a href="javascript:;">다음페이지</a></span>
+		<span class="button_last"><a href="javascript:;">마지막페이지</a></span>
+	</div>
+
+</div>
+<!-- //.wrap -->
+</body>
+</html>

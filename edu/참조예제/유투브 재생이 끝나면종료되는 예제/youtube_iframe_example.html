@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title></title>
+<meta charset="utf-8">
+</head>
+<body>
+<div id="iframe_player"></div>
+
+<script>
+var player = {},
+	$iframe_player = {},
+	tag = document.createElement('script'),
+	firstScriptTag = document.getElementsByTagName('script')[0];
+	
+	
+	tag.src = "https://www.youtube.com/iframe_api";
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+function onYouTubeIframeAPIReady() {
+	player = new YT.Player('iframe_player', {
+		width: '850',
+		height: '510',
+		videoId: 'bN4zk9_O_dI',
+		events: {
+			onReady : function( event ) {
+				event.target.playVideo();
+				$iframe_player = document.getElementById('iframe_player');
+			},
+			onStateChange : function( event ) {
+				if( event.data == 0 ) {
+					$iframe_player.style['display'] = 'none';
+				}
+			}
+		}
+	});
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+
+<title>RWD Table</title>
+
+<!-- <link rel="stylesheet" type="text/css" href="css/sjFont.css" /> 나눔폰트를 이용 할 경우만 사용 -->
+<link rel="stylesheet" type="text/css" href="css/uiReset.css" />
+<link rel="stylesheet" type="text/css" href="css/uiLayout.css" />
+<link rel="stylesheet" type="text/css" href="css/uiTemp.css" />
+<link rel="stylesheet" type="text/css" href="css/uiPopup.css" />
+<link rel="stylesheet" type="text/css" href="css/uiMedia.css" />
+
+<script type="text/javascript" src="js/plugin/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/common/gnb.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	$('table').attr('cellSpacing', 0);
+	$('table').find('colgroup')
+		.find('col:first').addClass('first').end()
+		.find('col:last').addClass('last').end()
+	;	
+	$('table').find('tr')
+		.find('th:first').addClass('first').end()
+		.find('th:last').addClass('last').end()
+		.find('td:first').addClass('first').end()
+		.find('td:last').addClass('last').end()
+	;
+	
+	$('.first + col + col').addClass('rwdblid').end();
+	$('.first + th + th').addClass('rwdblid').end();
+	$('.first + td + td').addClass('rwdblid').end();
+	
+});
+</script>
+
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" type="text/css" href="css/ie.css" />
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="css/ie7.css" />
+<![endif]-->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="css/ie8.css" />
+<![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" type="text/css" href="css/ie9.css" />
+<![endif]-->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="js/plugin/html5.js"></script>
+<script type="text/javascript" src="js/plugin/css3-mediaqueries.js"></script>
+<![endif]-->
+</head>
+<body>
+
+<div class="list_table rwdtable">
+	<table>
+	<caption>목록</caption>
+	<colgroup>
+		<col style="width:10%" />
+		<col />
+		<col style="width:10%" />
+		<col style="width:10%" />
+	</colgroup>
+	<thead>
+		<tr>
+			<th scope="col" class="col01">번호</th>
+			<th scope="col" class="col02">제목</th>
+			<th scope="col" class="col03">작성자</th>
+			<th scope="col" class="col04">조회수</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="row01">10</td>
+			<td class="text_left row02"><a href="view.html">목록 게시판입니다. 목록 게시판입니다.</a></td>
+			<td class="row03">관리자</td>
+			<td class="row04">1000</td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td class="text_left"><a href="view.html">목록 게시판입니다.</a></td>
+			<td>관리자</td>
+			<td>1000</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td class="text_left"><a href="view.html">목록 게시판입니다.</a></td>
+			<td>관리자</td>
+			<td>1000</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td class="text_left"><a href="view.html">목록 게시판입니다.</a></td>
+			<td>관리자</td>
+			<td>1000</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td class="text_left"><a href="view.html">목록 게시판입니다.</a></td>
+			<td>관리자</td>
+			<td>1000</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td class="text_left"><a href="view.html">목록 게시판입니다.</a></td>
+			<td>관리자</td>
+			<td>1000</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td class="text_left"><a href="view.html">목록 게시판입니다.</a></td>
+			<td>관리자</td>
+			<td>1000</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td class="text_left"><a href="view.html">목록 게시판입니다.</a></td>
+			<td>관리자</td>
+			<td>1000</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td class="text_left"><a href="view.html">목록 게시판입니다.</a></td>
+			<td>관리자</td>
+			<td>1000</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td class="text_left"><a href="view.html">목록 게시판입니다.</a></td>
+			<td>관리자</td>
+			<td>1000</td>
+		</tr>
+	</tbody>
+	</table>
+</div>
+<!-- //.list_table -->
+
+</body>
+</html>

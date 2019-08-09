@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Basic Style SubLayout</title>
+
+<!-- CSS Type -->
+<link rel="stylesheet" type="text/css" href="css/uiReset.css" />
+<link rel="stylesheet" type="text/css" href="css/uiLayout.css" />
+<link rel="stylesheet" type="text/css" href="css/uiPopup.css" />
+
+<!-- Script Type -->
+<script type="text/javascript" src="js/plugin/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/common/gnb.js"></script>
+<script type="text/javascript">
+$(function(){
+	var snbMenuNum = function(index) {return "sm" + (index + 1);};
+	$('.snb li').addClass(snbMenuNum);
+	$('.snb li a').bind('click', function(){ 
+		$(this).addClass('current').parent().siblings().children().removeClass('current');
+	});
+	$('.header').load('inc/header.html .headerwrap');
+	$('.visual').load('inc/visual.html .visualwrap');
+	$('.cbody').load('temp/list.html .cbodywrap');
+	$('.footer').load('inc/footer.html .footerwrap');
+	$(".sm1 a").click(function(){
+		$('.cbody').load('temp/list.html .cbodywrap');
+		return false;
+	});
+	$(".sm2 a").click(function(){
+		$('.cbody').load('temp/view.html .cbodywrap');
+		return false;
+	});
+	$(".sm3 a").click(function(){
+		$('.cbody').load('temp/write.html .cbodywrap');
+		return false;
+	});
+	$(".sm4 a").click(function(){
+		$('.cbody').load('temp/join.html .cbodywrap');
+		return false;
+	});
+	$(".sm5 a").click(function(){
+		$('.cbody').load('temp/schedule.html .cbodywrap');
+		return false;
+	});
+	$(".sm6 a").click(function(){
+		$('.cbody').load('temp/post.html .winwrap');
+		return false;
+	});
+	$(".sm7 a").click(function(){
+		$('.cbody').load('temp/tapmenu.html .tapmenu');
+		return false;
+	});
+	$(".sm8 a").click(function(){
+		$('.cbody').load('temp/pagination.html .pagiarea');
+		return false;
+	});
+	$(".sm9 a").click(function(){
+		$('.cbody').load('temp/login.html .login');
+		return false;
+	});
+	$(".sm10 a").click(function(){
+		$('.cbody').load('temp/search.html .search');
+		return false;
+	});
+});
+</script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="js/plugin/html5.js"></script>
+<script type="text/javascript" src="js/plugin/css3-mediaqueries.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="wrap">
+	<div class="header">
+	</div>
+	<!-- //.header -->
+	
+	<div class="visual">
+	</div>
+	<!-- //.visual -->
+	
+	<div class="container">
+		<div class="sidebar">
+			<h2 id="snbTitle">왼쪽 타이틀</h2>
+			<ul class="snb">
+				<li><a href="#">목 록</a></li>
+				<li><a href="#">내 용</a></li>
+				<li><a href="#">글쓰기</a></li>
+				<li><a href="#">회원가입</a></li>
+				<li><a href="#">일정</a></li>
+				<li><a href="#">우편번호</a></li>
+				<li><a href="#">탭메뉴</a></li>
+				<li><a href="#">페이지리스트</a></li>
+				<li><a href="#">로그인</a></li>
+				<li><a href="#">검색</a></li>
+			</ul>
+			<!-- //.snb -->
+		</div>
+		<!-- //.sidebar -->
+		
+		<div class="csection">
+			
+			<div class="titlewrap">
+				<h2 id="cTitle">목록</h2>
+				<div class="location">
+					<span class="home">HOME</span>&gt;<span>게시판</span>&gt;<strong>목록</strong>
+				</div>
+				<!-- //.location -->
+			</div>
+			<!-- //.titlewrap -->
+
+			<div class="chead">
+				콘텐츠 상단영역
+			</div>
+			<!-- //.chead -->
+
+			<div class="cbody">
+			</div>
+			<!-- //.cbody -->
+
+			<div class="cfoot">
+				콘텐츠 하단영역
+			</div>
+		</div>
+		<!-- //.csection -->
+		
+		<div class="aside">
+		</div>
+		<!-- //.aside -->
+	</div>
+	<!-- //.container -->
+	
+	<div class="banner">
+		<div class="bannerwrap">
+			하단배너 영역
+		</div>
+		<!-- //.bannerwrap -->
+	</div>
+	<!-- //.banner -->
+	
+	<div class="footer">
+	</div>
+	<!-- //.footer -->
+</div>
+<!-- //.wrap -->
+</body>
+</html>

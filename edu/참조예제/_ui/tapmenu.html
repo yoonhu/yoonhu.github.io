@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>TapMenu</title>
+
+<!-- CSS Type -->
+<link rel="stylesheet" type="text/css" href="css/uiReset.css" />
+<link rel="stylesheet" type="text/css" href="css/uiLayout.css" />
+<link rel="stylesheet" type="text/css" href="css/uiPopup.css" />
+
+<!-- Script Type -->
+<script type="text/javascript" src="js/plugin/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/common/gnb.js"></script>
+<style>
+.wrap{width:800px;margin:0 auto;}
+.container{padding:20px;border:1px solid;}
+.tapcontents{display:none;padding:50px 0;background:#f5f5f5;text-align:center;}
+.divtext{padding:40px 0;font-size:20px;font-weight:bold;text-align:center;}
+.divtext strong{display:block;color:blue;}
+.clicktext{padding:10px;text-align:center;}
+.testheight{}
+.testheight ul{position:relative;width:100%;height:20px;}
+.testheight ul:after{content:"";display:block;clear:both;}
+.testheight ul li{display:inline-block;float:left;width:33.3333333333333%;text-align:center;}
+.testheight ul li a{display:inline-block;width:100%;height:20px;line-height:20px;background:#f5f5f5;}
+.testheight ul li ul{position:absolute;top:20px;width:32%;height:auto;border:1px solid #000;background:#fff;z-index:2;}
+.testheight ul li ul li{display:block;float:none;width:100%;}
+.faqlist{margin:50px 0;border:1px solid #666;}
+.faqlist dl{}
+.faqlist dt{background:#f5f5f5;}
+.faqlist .active{background:#5af7f7;}
+.faqlist .faqlink{display:block;padding:8px 10px;}
+.faqlist dd{padding:20px;}
+</style>
+<script type="text/javascript">
+$(function(){
+	/* Top Layer Banner */
+	$('.toplayer_banner .btn_closelayer').on("click", function(){
+		$('.toplayer_banner').slideUp();
+	});
+});
+</script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="js/plugin/html5.js"></script>
+<script type="text/javascript" src="js/plugin/css3-mediaqueries.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<div class="wrap">
+
+
+	<script type="text/javascript">
+		$(function(){
+			var  tapMenuNum = function(index) {return "tm" + (index + 1);},
+					tapContNum = function(index) {return "taps" + (index + 1);};
+			$('.tapcontents:first').show();
+			$('.tm').addClass(tapMenuNum);
+			$('.tapcontents').addClass(tapContNum);
+			$('.tapmenu a').bind('click', function(){ 
+				tapsNum = $(this).parent().index() + 1;
+				$(this).addClass('current').parent().siblings().children().removeClass('current');
+				$('.tapcontents').hide();
+				$('.taps'+ tapsNum).show();
+			});
+
+			$('.divtext').text("Item:" + $('.tapcontents').siblings().length);
+
+			$('.tapcontents').text(function(index) {return "item number" + ( index + 1 );});
+
+			var parentEls = $(".tapcontents").siblings()
+			.map(function() {
+				return this.className;
+			}).get().join( ", " );
+
+			$(".divtext").append( "<strong>" + parentEls + "</strong>" );
+
+			$("*", document.body).click(function(event) {
+				event.stopPropagation();
+				var domElement = $( this ).get( 0 );
+				$(".clicktext").text( "Clicked on - " + domElement.nodeName );
+			});
+
+			$('#tapContent').load('listTest.html .cbody');
+			$(".tm1").click(function(){
+				$('#tapContent').load('listTest.html .cbody');
+				return false;
+			});
+			$(".tm2").click(function(){
+				$('#tapContent').load('viewTest.html .cbody');
+				return false;
+			});
+			$(".tm3").click(function(){
+				$('#tapContent').load('writeTest.html .cbody');
+				return false;
+			});
+			$(".tm4").click(function(){
+				$('#tapContent').load('joinTest.html .cbody');
+				return false;
+			});
+			$(".tm5").click(function(){
+				$('#tapContent').load('scheduleTest.html .cbody');
+				return false;
+			});
+			$(".tm6").click(function(){
+				$('#tapContent').load('postTest.html .winwrap');
+				return false;
+			});
+			$(".tm7").click(function(){
+				$('#tapContent').load('tabmenu.html .tapmenu');
+				return false;
+			});
+			$(".tm8").click(function(){
+				$('#tapContent').load('pagination.html .pagiarea');
+				return false;
+			});
+
+			$("#tapContent,.clicktext,.tapsgroup,.divtext,.testheight").wrapAll("<div class='container'></div>");
+			$(".container").prepend("<div style='height:50px;background:red'></div>");
+
+			/*
+			$('.faqlist dl dt:first').addClass('active');
+			$('.faqitem').hide();
+			$('.faqitem:first').show();
+			$('.faqlink').bind("click", function(){
+				$(this).parent().next().siblings('dd').slideUp('fast');
+				$(this).parent().next().slideDown('fast');
+				$('.faqlist dl dt').removeClass('active');
+				$(this).parent().addClass('active');
+			});
+			*/
+
+			/*
+			$('.faqitem').hide();
+			$('.faqlink').bind("click", function(){
+				$(this).parent().next('dd').slideToggle('fast').siblings('dd:visible').slideUp('fast');
+				$('.faqlist dl dt').removeClass('active');
+				$(this).parent().addClass('active');
+			});
+			*/
+
+			$('.faqlist').find('dd').hide().end().find('.faqlink').bind("click", function(){
+				$(this).parent().next().slideToggle('fast');
+			});
+
+		});
+	</script>
+	<div class="tapmenu">
+		<ul>
+			<li class="tm"><a href="javascript:;" class="current">목록</a></li>
+			<li class="tm"><a href="javascript:;">내용</a></li>
+			<li class="tm"><a href="javascript:;">글쓰기</a></li>
+			<li class="tm"><a href="javascript:;">회원가입</a></li>
+			<li class="tm"><a href="javascript:;">일정</a></li>
+			<li class="tm"><a href="javascript:;">우편번호</a></li>
+			<li class="tm"><a href="javascript:;">탭메뉴</a></li>
+			<li class="tm"><a href="javascript:;">페이지리스트</a></li>
+		</ul>
+	</div>
+	<!-- //.tapmenu -->
+
+	<div id="tapContent"></div>
+
+	<div class="clicktext"></div>
+
+	<div class="tapsgroup">
+		<div class="tapcontents current">1</div>
+		<div class="tapcontents">2</div>
+		<div class="tapcontents">3</div>
+		<div class="tapcontents">4</div>
+		<div class="tapcontents">5</div>
+		<div class="tapcontents">6</div>
+		<div class="tapcontents">7</div>
+		<div class="tapcontents">8</div>
+	</div>
+	<div class="divtext"></div>
+
+	<div class="testheight">
+		<ul class="testgnb">
+			<li><a href="javascript:;" class="gnblink">a1</a>
+				<ul>
+					<li>a1-1</li>
+					<li>a1-2</li>
+					<li>a1-3</li>
+				</ul>
+			</li>
+			<li><a href="javascript:;" class="gnblink">b1</a>
+				<ul>
+					<li>b1-1</li>
+					<li>b1-2</li>
+					<li>b1-3</li>
+					<li>b1-4</li>
+				</ul>
+			</li>
+			<li><a href="javascript:;" class="gnblink">c1</a>
+				<ul>
+					<li>c1-1</li>
+					<li>c1-2</li>
+					<li>c1-3</li>
+					<li>c1-4</li>
+					<li>c1-5</li>
+				</ul>
+			</li>
+		</ul>
+		<script type="text/javascript">
+		// 같은 속성에 같은 높이 부여하기
+		$.fn.equalizeHeights = function() {
+			var maxHeight = this.map(function( i, e ) {
+				return $( e ).height();
+			}).get();
+			return this.height( Math.max.apply( this, maxHeight ) );
+		};
+		//원하는 높이부분 클래스명 부여하기
+		$(".testgnb li ul").equalizeHeights();
+		$(".gnblink").mouseover(function() {
+			$(".testgnb li ul").equalizeHeights();
+		});
+		</script>
+	</div>
+
+	<div class="faqlist">
+		<dl>
+			<dt> <a href="javascript:;" class="faqlink">질의1</a></dt>
+			<dd class="faqitem">내용1</dd>
+			<dt><a href="javascript:;" class="faqlink">질의2</a></dt>
+			<dd class="faqitem">내용2</dd>
+			<dt><a href="javascript:;" class="faqlink">질의3</a></dt>
+			<dd class="faqitem">내용3</dd>
+			<dt><a href="javascript:;" class="faqlink">질의4</a></dt>
+			<dd class="faqitem">내용4</dd>
+			<dt><a href="javascript:;" class="faqlink">질의5</a></dt>
+			<dd class="faqitem">내용5</dd>
+		</dl>
+	</div>
+</div>
+<!-- //.wrap -->
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>transition, css3</title>
+	<style>
+	body {
+		width: 800px; 
+		margin: 0 auto;
+		font: 12px 'arial',sans-serif;
+	}
+	.wrap {
+		position: relative;
+	}
+	.blind {
+		display: none;
+	}
+	.click .btn {
+		display: block;
+		width: 50px;
+		background-color: green;
+		color: #fff;
+		font-size: 30px;
+		text-decoration: none;
+		text-align: center;
+		line-height: 50px;
+	}
+	.click .btn:after {
+		content: "\2630";
+	}
+	#nav {
+		position: absolute;
+		left: -1000px;
+		width: 300px;
+		height: 400px;
+		background-color: #aaa;
+		transition: left .5s ease;
+	}
+	#nav:target {
+		left: 0;
+	}
+	#nav .close {
+		position: absolute;
+		right: 0;
+		top: 0;
+		margin: 0;
+	}
+	#nav .close a {
+		display: block;
+		width: 50px;
+		background-color: green;
+		color: #fff;
+		font-size: 30px;
+		text-decoration: none;
+		text-align: center;
+		line-height: 50px;
+	}
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<h1>transition</h1>
+	<p class="click">
+		<a href="#nav" class="btn"><span class="blind">Menu</span></a>
+	</p>
+	<div id="nav">
+		<p class="close"><a href="#">&#10005;</a></p>
+	</div>
+</div>	
+</body>
+</html>

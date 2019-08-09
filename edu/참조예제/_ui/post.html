@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Post</title>
+
+<!-- CSS Type -->
+<link rel="stylesheet" type="text/css" href="css/uiReset.css" />
+<link rel="stylesheet" type="text/css" href="css/uiLayout.css" />
+<link rel="stylesheet" type="text/css" href="css/uiPopup.css" />
+
+<!-- Script Type -->
+<script type="text/javascript" src="js/plugin/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/common/gnb.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="js/plugin/html5.js"></script>
+<script type="text/javascript" src="js/plugin/css3-mediaqueries.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<div class="tapmenu">
+	<ul>
+		<li><a href="list.html">목록</a></li>
+		<li><a href="view.html">내용</a></li>
+		<li><a href="write.html">글쓰기</a></li>
+		<li><a href="join.html">회원가입</a></li>
+		<li><a href="schedule.html">일정</a></li>
+		<li><a href="post.html" class="current">우편번호</a></li>
+		<li><a href="tapmenu.html">탭메뉴</a></li>
+		<li><a href="pagination.html">페이지리스트</a></li>
+	</ul>
+</div>
+<!-- //.tapmenu -->
+
+
+<div class="winwrap">
+	<div class="postgroup">
+		<div class="post_search">
+			<dl>
+				<dt>도로명/지번</dt>
+				<dd>
+					<label><q class="tts">지번/도로명 입력</q>
+						<input type="text" name="" id="" />
+					</label>
+					<a href="#" class="btn btn-small">검색</a>
+				</dd>
+			</dl>
+		</div>
+		<!-- //.post_search -->
+		
+		<ul class="post_text">
+			<li>지번주소 : 동/읍/면/리 이름을 입력하세요. <span>예) 역삼동, 화도읍, 장유면</span></li>
+			<li>도로명주소(새주소) : 도로명을 입력하세요. <span>예) 중앙로, 불정로432번길</span></li>
+		</ul>
+			
+		<!-- 지번/도로명 검색결과가 없을 때 -->
+		<div class="post_nosearch">
+			<strong>'디지털1로'</strong> 우편번호 검색 결과가 없습니다.
+		</div>
+		<!-- //.post_nosearch -->
+			
+		<div class="tablestyle tablelist" style="margin-bottom:20px;">
+			<table>
+			<caption>검색결과 주소</caption>
+			<colgroup>
+				<col style="width:80%" />
+				<col />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">주소</th>
+					<th scope="col">우편번호</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<div class="addrlist">
+							<p>
+								<a href="#">
+									<strong>도로명 : </strong>
+									<span>서울특별시 금천구 <em>가산디지털1로 1</em></span>
+								</a>
+							</p>
+							<p>
+								<a href="#">
+									<strong>지번 : </strong>
+									<span><em>가산동 691-3</em></span>
+								</a>
+							</p>
+						</div>
+					</td>
+					<td>153-803</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="addrlist">
+							<p>
+								<a href="#">
+									<strong>도로명 : </strong>
+									<span>서울특별시 금천구 <em>가산디지털1로 104</em></span>
+								</a>
+							</p>
+							<p>
+								<a href="#">
+									<strong>지번 : </strong>
+									<span><em>가산동 345-54</em></span>
+								</a>
+							</p>
+						</div>
+					</td>
+					<td>153-802</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="addrlist">
+							<p>
+								<a href="#">
+									<strong>도로명 : </strong>
+									<span>서울특별시 금천구 <em>가산디지털1로 118</em></span>
+								</a>
+							</p>
+							<p>
+								<a href="#">
+									<strong>지번 : </strong>
+									<span><em>가산동 345-58</em></span>
+								</a>
+							</p>
+						</div>
+					</td>
+					<td>153-802</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="addrlist">
+							<p>
+								<a href="#">
+									<strong>도로명 : </strong>
+									<span>서울특별시 금천구 <em>가산디지털1로 119</em></span>
+								</a>
+							</p>
+							<p>
+								<a href="#">
+									<strong>지번 : </strong>
+									<span><em>가산동 345-9</em></span>
+								</a>
+							</p>
+						</div>
+					</td>
+					<td>153-773</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="addrlist">
+							<p>
+								<a href="#">
+									<strong>도로명 : </strong>
+									<span>서울특별시 금천구 <em>가산디지털1로 120</em></span>
+								</a>
+							</p>
+							<p>
+								<a href="#">
+									<strong>지번 : </strong>
+									<span><em>가산동 371-68</em></span>
+								</a>
+							</p>
+						</div>
+					</td>
+					<td>153-803</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+		<!-- //.tablestyle -->
+		
+		<div class="pagiarea">
+			<div class="pagination">
+				<a href="javascript:;" class="first" title="처음 목록페이지로 이동">&lt;&lt;</a>
+				<a href="javascript:;" class="prev" title="이전 목록페이지로 이동">&lt;</a>
+				<span class="current">1</span>
+				<a href="javascript:;">2</a>
+				<a href="javascript:;">3</a>
+				<a href="javascript:;">4</a>
+				<a href="javascript:;">5</a>
+				<a href="javascript:;" class="blind">6</a>
+				<a href="javascript:;" class="blind">7</a>
+				<a href="javascript:;" class="blind">8</a>
+				<a href="javascript:;" class="blind">9</a>
+				<a href="javascript:;" class="blind">10</a>
+				<a href="javascript:;" class="next" title="다음 목록페이지로 이동">&gt;</a>
+				<a href="javascript:;" class="last" title="마지막 목록페이지로 이동">&gt;&gt;</a>
+			</div>
+			<!-- //.pagination -->
+		</div>
+		<!-- //.pagiarea -->
+		
+		<div class="btnarea">
+			<a href="list.html" class="btn btn-close">닫기</a>
+		</div>
+		<!-- //.btn -->
+	</div>
+	<!-- //.postgroup -->
+</div>
+<!-- //.winwrap -->
+
+
+</body>
+</html>

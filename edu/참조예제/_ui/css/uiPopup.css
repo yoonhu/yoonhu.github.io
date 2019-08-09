@@ -1,0 +1,29 @@
+/* New Window Popup Layout */
+.winwrap{}
+
+/* New Window Popup Post Search */
+.postgroup{width:70%;margin:0 auto;padding:0;border:2px solid #666;}
+.post_search{width:92%;margin:0 auto;padding:10px 4%;border-bottom:1px solid #666;}
+.post_search:after{content:"";display:block;clear:both;}
+.post_search dl{width:100%;}
+.post_search dl:after{content:"";display:block;clear:both;}
+.post_search dt{float:left;width:25%;height:14px;padding:4px 0;font-weight:bold;text-align:center;}
+.post_search dd{float:left;width:70%;}
+.post_search a{}
+.post_text{width:92%;margin:0 auto;padding:10px 4%;background:#fcfcfc;}
+.post_text li{line-height:1.5;color:#333;}
+.post_text span{}
+.post_nosearch{width:92%;margin:0 auto;padding:20px 4%;background:#fcfcfc;text-align:center;}
+.post_nosearch strong{}
+	
+
+/* Layer Popup Layout */
+.layerwrap{}
+
+/* Top Layer Popup */
+.toplayer_banner{width:100%;background:#f5f5f5;border-bottom:1px solid #666;}
+.toplayer{position:relative;width:1000px;height:100px;margin:0 auto;background:green;text-align:center;}
+.toplayer .btn_closelayer{position:absolute;bottom:0;right:0;}
+
+/* Layer Button */
+.btn_closelayer{padding:5px;border:1px solid #666;background:#fff;color:#000;}

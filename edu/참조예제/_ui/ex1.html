@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>EX</title>
+
+<!-- CSS Type -->
+<link rel="stylesheet" type="text/css" href="css/uiReset.css" />
+<link rel="stylesheet" type="text/css" href="css/uiLayout.css" />
+<link rel="stylesheet" type="text/css" href="css/uiPopup.css" />
+
+<!-- Script Type -->
+<script type="text/javascript" src="js/plugin/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/common/gnb.js"></script>
+<script type="text/javascript">
+$(function(){
+	/* Top Layer Banner */
+	$('.toplayer_banner .btn_closelayer').on("click", function(){
+		$('.toplayer_banner').slideUp();
+	});
+});
+</script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="js/plugin/html5.js"></script>
+<script type="text/javascript" src="js/plugin/css3-mediaqueries.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<div class="wrap">
+	<div class="header">
+		<div class="headerwrap">
+			<h1><a href="index.html">LOGO</a></h1>
+			
+			<div class="tnb">
+				<a href="index.html">HOME</a>
+			</div>
+			<!-- //.tnb -->
+			
+			<div class="navigation">
+				<div id="gnbArea" class="nav">
+					<h2 id="gnbTitle"><a href="#snbTitle" title="주메뉴 건너띄기">주메뉴</a></h2>
+					<ul id="gnbNav" class="gnb">
+						<li class="gnb_depth1 gm1"><a href="list.html" class="gnblink">게시판</a>
+							<div class="gnb_depth2">
+								<ul>
+									<li><a href="list.html">목록</a></li>
+									<li><a href="view.html">내 용</a></li>
+									<li><a href="write.html">글쓰기</a></li>
+									<li><a href="join.html">회원가입</a></li>
+									<li><a href="schedule.html">일정</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="gnb_depth1 gm2"><a href="tabmenu.html" class="gnblink">탭메뉴</a>
+							<!-- 
+							<div class="gnb_depth2">
+								<ul>
+									<li><a href=""></a></li>
+								</ul>
+							</div>
+							 -->
+						</li>
+						<li class="gnb_depth1 gm3"><a href="pagination.html" class="gnblink">페이지리스트</a>
+							<!-- 
+							<div class="gnb_depth2">
+								<ul>
+									<li><a href=""></a></li>
+								</ul>
+							</div>
+							 -->
+						</li>
+						<li class="gnb_depth1 gm4"><a href="post.html" class="gnblink">팝업</a>
+							<div class="gnb_depth2">
+								<ul>
+									<li><a href="post.html">우편번호</a></li>
+									<li><a href="idpw.html">아이디/비밀번호</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<!-- //#gnb -->
+					<script type="text/javascript">
+					//<![CDATA[
+						$(function(){
+							// mCurrent - 1뎁스메뉴 활성화 번호, sCurrent - 2뎁스메뉴 활성화 번호,
+							$("#gnbNav").gnb({ mCurrent : 0, sCurrent : 0 });
+						});
+					//]]>
+					</script>
+				</div>
+				<!-- //.nav -->
+			</div>
+			<!-- //.navigation -->
+			
+		</div>
+		<!-- //.headerwrap -->
+	</div>
+	<!-- //.header -->
+	
+	<div class="visual">
+		<div class="visualwrap">
+			Visual Area
+		</div>
+		<!-- //.visualwrap -->
+	</div>
+	<!-- //.visual -->
+	
+	<div class="container">
+		<div class="sidebar">
+			<h2 id="snbTitle">왼쪽 타이틀</h2>
+			<ul class="snb">
+				<li><a href="list.html">목 록</a></li>
+				<li><a href="view.html">내 용</a></li>
+				<li class="current"><a href="write.html">글쓰기</a></li>
+				<li><a href="join.html">회원가입</a></li>
+				<li><a href="schedule.html">일정</a></li>
+				<li><a href="post.html" class="clear">우편번호</a></li>
+				<li><a href="tabmenu.html">탭메뉴</a></li>
+				<li><a href="pagination.html">페이지리스트</a></li>
+			</ul>
+			<!-- //.snb -->
+		</div>
+		<!-- //.sidebar -->
+		
+		<div class="csection">
+			
+			<div class="titlewrap">
+				<h2 id="cTitle">글쓰기</h2>
+				<div class="location">
+					<span class="home">HOME</span>&gt;<span>게시판</span>&gt;<strong>글쓰기</strong>
+				</div>
+				<!-- //.location -->
+			</div>
+			<!-- //.titlewrap -->
+
+			<div class="chead">
+				콘텐츠 상단영역
+			</div>
+			<!-- //.chead -->
+
+			<div class="part cbody">
+			
+				<div class="tapmenu">
+					<ul>
+						<li><a href="list.html">목록</a></li>
+						<li><a href="view.html">내용</a></li>
+						<li><a href="write.html" class="current">글쓰기</a></li>
+						<li><a href="join.html">회원가입</a></li>
+						<li><a href="schedule.html">일정</a></li>
+						<li><a href="post.html">우편번호</a></li>
+						<li><a href="tabmenu.html">탭메뉴</a></li>
+						<li><a href="pagination.html">페이지리스트</a></li>
+					</ul>
+				</div>
+				<!-- //.tabmenu -->
+				
+				
+				<div class="tablestyle">
+					<p class="caution"><i class="orange">*</i> 표시는 필수입력 항목입니다.</p>
+					<table>
+					<caption>쓰기 폼</caption>
+					<colgroup>
+						<col class="col01" />
+						<col class="col02" />
+						<col class="col03" />
+						<col class="col04" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">분류<i class="orange">*</i></th>
+							<td colspan="3">
+								<select name="" id="" title="분류선택">
+									<option value="">웹사업부</option>
+									<option value="">기획</option>
+									<option value="">개발</option>
+									<option value="">디자인</option>
+									<option value="">퍼블리싱</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">제목<i class="orange">*</i></th>
+							<td colspan="3">
+								<label><q class="tts">제목입력</q>
+									<input type="text" name="" id="" title="제목입력" />
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">작성자<i class="orange">*</i></th>
+							<td>
+								<label><q class="tts">작성자입력</q>
+									<input type="text" name="" id="" title="작성자입력" />
+								</label>
+							</td>
+							<th scope="row">작성일</th>
+							<td>
+								2015-03-04
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">내용<i class="orange">*</i></th>
+							<td colspan="3" class="subject">
+								<label><q class="tts">내용입력</q>
+									<textarea rows="10" cols="30" id="" title="내용입력"></textarea>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">첨부파일</th>
+							<td colspan="3">
+								<label><q class="tts">첨부파일 선택</q>
+									<input type="file" name="" id="" title="첨부파일 선택" />
+								</label>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+				<!-- //.tablestyle -->
+				
+				<div class="btnarea text_right">
+					<a href="view.html" class="btn btn-confirm">등록</a>
+					<a href="view.html" class="btn btn-cancel">취소</a>
+					<a href="view.html" class="btn btn-gray">상세페이지</a>
+				</div>
+				<!-- //.btn -->
+
+			</div>
+			<!-- //.cbody -->
+
+			<div class="cfoot">
+				콘텐츠 하단영역
+			</div>
+			<!-- //.cfoot -->
+
+		</div>
+		<!-- //.csection -->
+		
+		<div class="aside">
+			우측 배너(기타) 영역
+		</div>
+		<!-- //.aside -->
+
+	</div>
+	<!-- //.container -->
+	
+	<div class="banner">
+		<div class="bannerwrap">
+			하단배너 영역
+		</div>
+		<!-- //.bannerwrap -->
+	</div>
+	<!-- //.banner -->
+	
+	<div class="footer">
+		<div class="footerwrap">
+			<address>주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소</address>
+			<p class="tel">Tel (02)000-0000 FAX (02)000-0000</p>
+			<p class="copyright">Copyright &copy; 2015 All rights Reserved.</p>
+		</div>
+		<!-- //.footerwrap -->
+	</div>
+	<!-- //.footer -->
+</div>
+<!-- //.wrap -->
+</body>
+</html>

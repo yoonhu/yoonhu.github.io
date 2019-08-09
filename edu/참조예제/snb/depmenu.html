@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no, address=no, email=no, date=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>무한뎁스형식의 메뉴 예제</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="depmenu.css">
+	<!--[if lt IE 9]>
+		<script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	
+	<div class="depmenu">
+		<h2>무한뎁스 메뉴</h2>
+		<ul class="menu">
+			<li class="dep1">
+				<a href="#">회사소개</a>
+				<ul class="dep dep2">
+					<li>
+						<a href="#">회사소개1</a>
+						<ul class="dep dep3">
+							<li>
+								<a href="#">회사소개1_1</a>
+								<ul class="dep dep4">
+									<li><a href="#">회사소개1_1_1</a></li>
+									<li><a href="#">회사소개1_1_2</a></li>
+									<li><a href="#">회사소개1_1_3</a></li>
+									<li><a href="#">회사소개1_1_4</a></li>
+								</ul>
+							</li>
+							<li><a href="#">회사소개1_2</a></li>
+							<li><a href="#">회사소개1_3</a></li>
+							<li><a href="#">회사소개1_4</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">회사소개2</a>
+						<ul class="dep dep3">
+							<li><a href="#">회사소개2_1</a></li>
+							<li><a href="#">회사소개2_2</a></li>
+							<li><a href="#">회사소개2_3</a></li>
+							<li><a href="#">회사소개2_4</a></li>
+						</ul>
+					</li>
+					<li><a href="#">회사소개3</a></li>
+					<li><a href="#">회사소개4</a></li>
+				</ul>
+			</li>
+			<li class="dep1">
+				<a href="#">대표 인사말</a>
+			</li>
+			<li class="dep1">
+				<a href="#">연혁</a>
+				<ul class="dep dep2">
+					<li><a href="#">연혁1_1</a></li>
+					<li><a href="#">연혁1_2</a></li>
+					<li><a href="#">연혁1_3</a></li>
+					<li><a href="#">연혁1_4</a></li>
+				</ul>
+			</li>
+			<li class="dep1">
+				<a href="#">조직도</a>
+			</li>
+		</ul>
+	</div>
+	
+	<script src="../js/jquery/jquery-3.3.1.min.js"></script>
+	<script src="../js/jquery/jquery.easing.min.js"></script>
+	<script src="../js/common/uxDetect.min.js"></script>
+	<script>
+	$(function(){
+		var $depMenu = $('.depmenu');
+		$depMenu.find('li').each(function(i, e){
+			//하위 메뉴가 있다면 해당 li에 클래스 생성
+			if( $(e).children().length > 1 ){
+				$(e).addClass('arr');
+			} else {
+				$(e).addClass('narr');
+			}
+	
+			//클릭 이벤트
+			$(e).click(function(){
+				if( $(e).is('.arr') ){
+					var speed = 200;
+					var open = 'open';
+					//해당 메뉴 열고 닫힘
+					$(e).toggleClass(open).find('>.dep').slideToggle(speed);
+					//닫을경우 해당 메뉴의 하위 모두 닫힘
+					$(e).find('li').removeClass(open).find('.dep').slideUp(speed);
+					//형제 포함 형제의 하위메뉴 모두 닫음
+					$(e).siblings().removeClass(open).find('.dep').slideUp(speed).find('li').removeClass(open);
+					return false;
+				}
+			});
+		});
+	});
+	</script>
+	
+</body>
+</html>

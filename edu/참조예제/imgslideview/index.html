@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>갤러리 뷰</title>
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="HandheldFriendly" content="true">
+<meta name="format-detection" content="telephone=no, email=no, address=no">
+<meta name="apple-mobile-web-app-capable" content=" yes">
+<meta name="robots" content="index,follow">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+
+<link href="css/style.css" rel="stylesheet">
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+</head>
+<body>
+
+<!-- wrap -->
+<div class="img_wrap">
+	<a href="#none" class="img_v"><img src="img/img1.png" width="100%" height="auto"></a>
+</div>
+<!-- //wrap -->
+
+
+<!-- 후기 사진보기 레이어 -->
+<div class="view_layer">
+	<div class="img_slide">
+		<ul>
+			<li>
+				<p class="img"><img src="img/img1.png" width="100%" height="auto"></p>
+				<div class="txt">
+					<strong>생활편의시설</strong>
+					<p>생활이 아주 편리합니다.</p>
+				</div>
+			</li>
+			<li>
+				<p class="img"><img src="img/img1.png" width="100%" height="auto"></p>
+				<div class="txt">
+					<strong>생활편의시설</strong>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<a href="#none" class="view_close">닫기</a>
+</div>
+
+
+
+<script>
+$(function(){
+
+	//view 열기
+		$('.img_v').click(function(){
+			imgView();
+			return false;
+		});
+
+	//view 닫기
+		$('.view_close').click(function(){
+			$(this).parents('.view_layer').hide();
+			$('html').css('overflow','auto');
+			return false;
+		});
+
+	//view  작동
+		function imgView(){
+			$('html').css('overflow','hidden');
+			var $viewWrap = $('.view_layer');
+			$viewWrap.show();
+			if( $viewWrap.find('.img_slide li').length > 1 ){
+				$viewWrap.find('.img_slide ul').bxSlider({
+					mode:'horizontal',
+					auto:false,	//자동 슬라이드 필요 없을 시 false로 변경
+					pause:4000,
+					pager:true,
+					pagerType:'short',
+					controls:true,
+					autoHover:true
+				});
+			}
+		}
+
+});
+</script>
+</body>
+</html>
